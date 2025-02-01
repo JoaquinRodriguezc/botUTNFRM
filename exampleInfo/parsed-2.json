@@ -1,0 +1,1668 @@
+[
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1P09",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1P18",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1P99",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "09:00",
+          "horaFin": "12:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "09:00",
+          "horaFin": "12:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "09:00",
+          "horaFin": "10:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "09:00",
+          "horaFin": "12:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "09:00",
+          "horaFin": "12:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "09:00",
+          "horaFin": "10:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Fundamentos de Informática",
+    "curso": "1P09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Fundamentos de Informática",
+    "curso": "1P18",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Ingeniería Civil I",
+    "curso": "1P09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Ingeniería Civil I",
+    "curso": "1P18",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Ingeniería Civil I",
+    "curso": "1P99",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "10:15",
+          "horaFin": "12:25"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "10:15",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Ingeniería Civil I",
+    "curso": "1RIV4",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "18:00",
+          "horaFin": "20:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Química General",
+    "curso": "1P09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Química General",
+    "curso": "1P18",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Química General",
+    "curso": "1P99",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Sistemas de Representación",
+    "curso": "1P09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Sistemas de Representación",
+    "curso": "1P18",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Sistemas de Representación",
+    "curso": "1P99",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Sistemas de Representación",
+    "curso": "1RIV4",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "17:15",
+          "horaFin": "19:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:00",
+          "horaFin": "16:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis Matemático II",
+    "curso": "2P03",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis Matemático II",
+    "curso": "2P09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física II",
+    "curso": "2P03",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física II",
+    "curso": "2P09",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Ingeniería Civil II",
+    "curso": "2P03",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Ingeniería Civil II",
+    "curso": "2P09",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Inglés I",
+    "curso": "2B-64",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "12:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "12:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "12:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Inglés I",
+    "curso": "2B-69",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2P03",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2P09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Tecnología de los Materiales",
+    "curso": "2P03",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "15:15",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "15:15",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Tecnología de los Materiales",
+    "curso": "2P09",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Tecnología de los Materiales",
+    "curso": "2P31",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Cálculo Avanzado",
+    "curso": "3P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Cálculo Avanzado",
+    "curso": "3P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Economía",
+    "curso": "3P01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "11:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Economía",
+    "curso": "3P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "09:30",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Geotopografía",
+    "curso": "3P01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "18:15"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "18:15"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Geotopografía",
+    "curso": "3P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Hidráulica General y Aplicada",
+    "curso": "3P01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Hidráulica General y Aplicada",
+    "curso": "3P02",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Resistencia de Materiales",
+    "curso": "3P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "18:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "15:15",
+          "horaFin": "18:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Resistencia de Materiales",
+    "curso": "3P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Tecnología de la Construcción",
+    "curso": "3P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Tecnología de la Construcción",
+    "curso": "3P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Diseño Arquitectónico, Planeamiento y Urbanismo",
+    "curso": "4P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:45",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:45",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Diseño Estructural (Elec.)",
+    "curso": "4P02",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Economía",
+    "curso": "4P11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Estructuras de Hormigón",
+    "curso": "4P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "15:15",
+          "horaFin": "19:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Estructuras del Hormigón",
+    "curso": "4P01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "15:15",
+          "horaFin": "19:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Ferrocarriles (Elec.)",
+    "curso": "4P11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Geotecnia",
+    "curso": "4P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:45",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:45",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Hidrología y Obras Hidráulicas",
+    "curso": "4P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:45"
+        },
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:45"
+        },
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Hidrología y Obras Hidráulicas",
+    "curso": "4P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Ingeniería Legal",
+    "curso": "4P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Ingeniería Legal",
+    "curso": "4P02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Prefabricación (Elec.)",
+    "curso": "4P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Tránsito y Transporte (Elec.)",
+    "curso": "4P02",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Análisis Estructural II",
+    "curso": "5P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:45",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:45",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Centrales y Máquinas Hidráulicas (Elec.)",
+    "curso": "5P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Construcciones Metálicas y de Madera",
+    "curso": "5P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Diseño Sustentable de Edificios (Elec.)",
+    "curso": "5P11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Formación de Emprendedores (Elec.)",
+    "curso": "7P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Metodología de la Ciencia (Elec.)",
+    "curso": "7P01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Organización y Conducción de Obras",
+    "curso": "5P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Proyecto Final",
+    "curso": "5P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Puentes (Elec.)",
+    "curso": "5P11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Vías de Comunicación II",
+    "curso": "5P01",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:45",
+          "horaFin": "22:45"
+        }
+      ]
+    }
+  }
+]

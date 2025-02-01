@@ -20,7 +20,7 @@ export type ClassroomLocation = {
 export type FinalExam = {
   subjectName: string;
   examDays: ScheduleEntry[];
-  classroom: ClassroomLocation;
+  classroom?: ClassroomLocation;
 };
 
 export type CourseSession = {
@@ -28,7 +28,7 @@ export type CourseSession = {
   professor: string;
   classroom: ClassroomLocation;
   schedule: ScheduleEntry[];
-  curriculum?: Curriculum;
+  curriculum?: string;
 };
 export type OfficeHours = {
   subject: Subject;
@@ -36,6 +36,7 @@ export type OfficeHours = {
 };
 export type Curriculum = {
   name: string;
+  subjects: Subject[];
 };
 export type Degree = {
   name: string;
@@ -49,3 +50,11 @@ export type Campus = {
   name: string;
   address: string;
 };
+export enum Degrees {
+  SISTEMAS = '5',
+  ELECTRONICA = '9',
+  CIVIL = '31',
+  ELECTROMECANICA = '8',
+  TELECOMUNICACIONES = '15',
+  QUIMICA = '27',
+}

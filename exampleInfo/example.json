@@ -1,0 +1,316 @@
+[
+  {
+    "subject": {
+      "year": "1",
+      "term": "A",
+      "name": "Análisis de Señales y Sistemas",
+      "courseCode": "2R11",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Martes",
+        "startTime": "21:15",
+        "endTime": "23:30"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "21:15",
+        "endTime": "23:30"
+      }
+    ],
+    "curriculum": "95",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Análisis Matemático II",
+      "courseCode": "1R11",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Lunes",
+        "startTime": "14:30",
+        "endTime": "17:30"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "14:30",
+        "endTime": "16:00"
+      },
+      {
+        "day": "Viernes",
+        "startTime": "14:30",
+        "endTime": "17:30"
+      }
+    ],
+    "curriculum": "95",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Análisis Matemático II",
+      "courseCode": "1R11",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Lunes",
+        "startTime": "14:30",
+        "endTime": "17:30"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "14:30",
+        "endTime": "16:00"
+      },
+      {
+        "day": "Viernes",
+        "startTime": "14:30",
+        "endTime": "17:30"
+      }
+    ],
+    "curriculum": "2023",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Análisis Matemático II",
+      "courseCode": "1R20",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Martes",
+        "startTime": "19:00",
+        "endTime": "21:15"
+      },
+      {
+        "day": "Miércoles",
+        "startTime": "19:00",
+        "endTime": "21:15"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "19:00",
+        "endTime": "22:00"
+      }
+    ],
+    "curriculum": "2023",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Análisis Matemático II",
+      "courseCode": "1R20",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Martes",
+        "startTime": "19:00",
+        "endTime": "21:15"
+      },
+      {
+        "day": "Miércoles",
+        "startTime": "19:00",
+        "endTime": "21:15"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "19:00",
+        "endTime": "22:00"
+      }
+    ],
+    "curriculum": "95",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Diseño Asistido por Computadora",
+      "courseCode": "1R11",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Viernes",
+        "startTime": "17:30",
+        "endTime": "19:00"
+      },
+      {
+        "day": "Sabado",
+        "startTime": "08:00",
+        "endTime": "10:15"
+      }
+    ],
+    "curriculum": "2023",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Diseño Asistido por Computadora",
+      "courseCode": "1R20",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Viernes",
+        "startTime": "19:00",
+        "endTime": "20:30"
+      },
+      {
+        "day": "Sabado",
+        "startTime": "10:15",
+        "endTime": "12:30"
+      }
+    ],
+    "curriculum": "2023",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Física I",
+      "courseCode": "1R11",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Martes",
+        "startTime": "16:00",
+        "endTime": "17:30"
+      },
+      {
+        "day": "Miércoles",
+        "startTime": "16:45",
+        "endTime": "19:00"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "16:00",
+        "endTime": "19:00"
+      }
+    ],
+    "curriculum": "2023",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Física I",
+      "courseCode": "1R11",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Martes",
+        "startTime": "16:00",
+        "endTime": "17:30"
+      },
+      {
+        "day": "Miércoles",
+        "startTime": "16:45",
+        "endTime": "19:00"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "16:00",
+        "endTime": "19:00"
+      }
+    ],
+    "curriculum": "95",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Física I",
+      "courseCode": "1R20",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Lunes",
+        "startTime": "20:30",
+        "endTime": "22:00"
+      },
+      {
+        "day": "Martes",
+        "startTime": "21:15",
+        "endTime": "22:45"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "22:00",
+        "endTime": "23:30"
+      },
+      {
+        "day": "Viernes",
+        "startTime": "20:30",
+        "endTime": "23:30"
+      }
+    ],
+    "curriculum": "95",
+    "professor": null,
+    "classroom": null
+  },
+  {
+    "subject": {
+      "year": "1",
+      "term": "2",
+      "name": "Física I",
+      "courseCode": "1R20",
+      "deparment": null
+    },
+    "schedule": [
+      {
+        "day": "Lunes",
+        "startTime": "20:30",
+        "endTime": "22:00"
+      },
+      {
+        "day": "Martes",
+        "startTime": "21:15",
+        "endTime": "22:45"
+      },
+      {
+        "day": "Jueves",
+        "startTime": "22:00",
+        "endTime": "23:30"
+      },
+      {
+        "day": "Viernes",
+        "startTime": "20:30",
+        "endTime": "23:30"
+      }
+    ],
+    "curriculum": "2023",
+    "professor": null,
+    "classroom": null
+  }
+]
