@@ -5,7 +5,6 @@ import { SourceModule } from './source/source.module';
 import { WhatsappModule } from './whatsapp/whatsapp.module';
 import { IaModule } from './ia/ia.module';
 import { ConfigModule } from '@nestjs/config';
-import { IaService } from './ia/ia.service';
 
 @Module({
   imports: [
