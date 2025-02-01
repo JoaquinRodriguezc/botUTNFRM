@@ -1,0 +1,1872 @@
+[
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Análisis de Señales y Sistemas",
+    "curso": "2R11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Análisis Matemático II",
+    "curso": "1R11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Análisis Matemático II",
+    "curso": "1R20",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Diseño Asistido por Computadora",
+    "curso": "1R11",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Diseño Asistido por Computadora",
+    "curso": "1R20",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "10:15",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1R11",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1R20",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "20:30",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "20:30",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Informática I",
+    "curso": "1R11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Informática I",
+    "curso": "1R20",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Informática I",
+    "curso": "1RIV2",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:00",
+          "horaFin": "15:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:30",
+          "horaFin": "19:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "09:30",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Informática II",
+    "curso": "2R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "A",
+    "materia": "Informática II",
+    "curso": "2R11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas de Representación",
+    "curso": "1R11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas de Representación",
+    "curso": "1R20",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "10:15",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Señales y Sistemas",
+    "curso": "2R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Señales y Sistemas",
+    "curso": "2R11",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física Electrónica",
+    "curso": "2R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "15:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "15:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física Electrónica",
+    "curso": "2R11",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Informática II",
+    "curso": "2R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Informática II",
+    "curso": "2R11",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Inglés I",
+    "curso": "2B-62",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Inglés I",
+    "curso": "2B-67",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2R11",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "22:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "22:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Electrónica Aplicada I",
+    "curso": "3R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Electrónica Aplicada I",
+    "curso": "3R08",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Inglés II",
+    "curso": "3B-72",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Medios de Enlace",
+    "curso": "3R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Medios de Enlace",
+    "curso": "3R08",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Técnicas Digitales I",
+    "curso": "3R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Técnicas Digitales I",
+    "curso": "3R08",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Teoría de Circuitos I",
+    "curso": "3R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Teoría de Circuitos I",
+    "curso": "3R08",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Teoría de los Circuitos I",
+    "curso": "3R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Teoría de los Circuitos I",
+    "curso": "3R08",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Electrónica Aplicada II",
+    "curso": "4R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Electrónica Aplicada II",
+    "curso": "4R07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "15:15",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "15:15",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Máquinas e Instalaciones Eléctricas",
+    "curso": "4R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Máquinas e Instalaciones Eléctricas",
+    "curso": "4R07",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Medidas Electrónicas I",
+    "curso": "4R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Medidas Electrónicas I",
+    "curso": "4R07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Sistemas de Comunicaciones",
+    "curso": "4R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Sistemas de Comunicaciones",
+    "curso": "4R07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Técnicas Digitales II",
+    "curso": "4R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "22:45"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "22:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Técnicas Digitales II",
+    "curso": "4R07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Teoría de Circuitos II",
+    "curso": "4R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Teoría de Circuitos II",
+    "curso": "4R07",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Teoría de los Circuitos II",
+    "curso": "4R05",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Teoría de los Circuitos II",
+    "curso": "4R07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Electrónica Aplicada III",
+    "curso": "5R04",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "20:30",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Electrónica Aplicada III",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Electrónica de Potencia",
+    "curso": "5R04",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Electrónica de Potencia",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:45",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Medidas Electrónicas II",
+    "curso": "5R04",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Medidas Electrónicas II",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "20:30",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Metodología de la Ciencia (Elec.)",
+    "curso": "7R1",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Organización Industrial",
+    "curso": "5R04",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Organización Industrial",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "18:15",
+          "horaFin": "19:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Sistemas de Control",
+    "curso": "5R04",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Sistemas de Control",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Técnicas Digitales III",
+    "curso": "5R04",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Técnicas Digitales III",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Tecnología Electrónica",
+    "curso": "5R04",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "21:15",
+          "horaFin": "22:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Tecnología Electrónica",
+    "curso": "5R05",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:45",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Control de Procesos (Elec.)",
+    "curso": "6R4",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Electrónica Automotriz (Elec.)",
+    "curso": "6R1",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Epistemología de las Ciencias de la Ingeniería (Elec.)",
+    "curso": "6R2",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Evaluación e Innovación de Tecnología desde la Perspectiva CTS (Elec.)",
+    "curso": "6R1",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Formación de Emprendedores (Elec.)",
+    "curso": "6R1",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Interoperabilidad (Elec.)",
+    "curso": "6R2",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Redes de Comunicaciones Móviles (Elec.)",
+    "curso": "6R3",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "18:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "6",
+    "dictado": "2",
+    "materia": "Robótica (Elec.)",
+    "curso": "6R1",
+    "dias": {
+      "Plan-95": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  }
+]

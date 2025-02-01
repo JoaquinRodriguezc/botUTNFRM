@@ -1,0 +1,2198 @@
+[
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Algoritmos y Estructuras de Datos",
+    "curso": "1K01",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:45",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "10:15",
+          "horaFin": "13:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:45",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "10:15",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Algoritmos y Estructuras de Datos",
+    "curso": "1K02",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Algoritmos y Estructuras de Datos",
+    "curso": "1K04",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:45",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "10:15",
+          "horaFin": "13:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:45",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "10:15",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Algoritmos y Estructuras de Datos",
+    "curso": "1K13",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "18:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "18:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Algoritmos y Estructuras de Datos",
+    "curso": "1K22",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "18:15",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "18:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Arquitectura de Computadoras",
+    "curso": "1K01",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Arquitectura de Computadoras",
+    "curso": "1K02",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Arquitectura de Computadoras",
+    "curso": "1K04",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Arquitectura de Computadoras",
+    "curso": "1K13",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "13:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "13:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Arquitectura de Computadoras",
+    "curso": "1K131",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Arquitectura de Computadoras",
+    "curso": "1K22",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1K01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1K02",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1K04",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1K13",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Física I",
+    "curso": "1K22",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "18:15",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "18:15",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "18:15",
+          "horaFin": "20:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "18:15",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "18:15",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "18:15",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Organizaciones",
+    "curso": "1K01",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Organizaciones",
+    "curso": "1K02",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Organizaciones",
+    "curso": "1K04",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Organizaciones",
+    "curso": "1K13",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Organizaciones",
+    "curso": "1K22",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Procesos de Negocio",
+    "curso": "1K01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Procesos de Negocio",
+    "curso": "1K02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Procesos de Negocio",
+    "curso": "1K04",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Procesos de Negocio",
+    "curso": "1K13",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "13:45",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "1",
+    "dictado": "2",
+    "materia": "Sistemas y Procesos de Negocio",
+    "curso": "1K22",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "22:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas",
+    "curso": "2K01",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas",
+    "curso": "2K02",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas",
+    "curso": "2K07",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas",
+    "curso": "2K08",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas",
+    "curso": "2K13",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K03",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "10:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K08",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K13",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "A",
+    "materia": "Análisis de Sistemas de Información",
+    "curso": "2K14",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física II",
+    "curso": "2K01",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "13:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "11:00",
+          "horaFin": "13:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física II",
+    "curso": "2K07",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "13:45",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "13:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Física II",
+    "curso": "2K13",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Inglés I",
+    "curso": "2B-60",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "08:00",
+          "horaFin": "09:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Inglés I",
+    "curso": "2B-65",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "16:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Paradigmas de Programación",
+    "curso": "2K01",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Paradigmas de Programación",
+    "curso": "2K02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Paradigmas de Programación",
+    "curso": "2K07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Paradigmas de Programación",
+    "curso": "2K13",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "18:15",
+          "horaFin": "21:15"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "18:15",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Sistemas Operativos",
+    "curso": "2K01",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "11:00",
+          "horaFin": "14:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Sistemas Operativos",
+    "curso": "2K02",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "08:00",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Sistemas Operativos",
+    "curso": "2K07",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:00",
+          "horaFin": "16:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:00",
+          "horaFin": "16:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "2",
+    "dictado": "2",
+    "materia": "Sistemas Operativos",
+    "curso": "2K13",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "23:30"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Administración de Proyectos (Elec.)",
+    "curso": "3K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "22:45"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Análisis Numérico",
+    "curso": "3K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Análisis Numérico",
+    "curso": "3K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Computación Paralela (Elec.)",
+    "curso": "3K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Desarrollo de Software",
+    "curso": "3K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Desarrollo de Software",
+    "curso": "3K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "20:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Diseño de Sistemas",
+    "curso": "3K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "18:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Diseño de Sistemas",
+    "curso": "3K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Diseño de Sistemas de Información",
+    "curso": "3K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "18:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Diseño de Sistemas de Información",
+    "curso": "3K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "A",
+    "materia": "Diseño de Sistemas de Información",
+    "curso": "3K11",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "17:30",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Inglés II",
+    "curso": "3B-70",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "09:30",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "09:30",
+          "horaFin": "11:00"
+        }
+      ],
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "09:30",
+          "horaFin": "11:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "09:30",
+          "horaFin": "11:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Matemática Superior",
+    "curso": "3K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "3",
+    "dictado": "2",
+    "materia": "Matemática Superior",
+    "curso": "3K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Administración de Recursos",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Administración de Recursos",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Administración de Sistemas de Información",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Administración de Sistemas de Información",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Arquitectura de Microservicios (Elec.)",
+    "curso": "4K091",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Bases de Datos Avanzada (Elec.)",
+    "curso": "4K101",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Bases de Datos Avanzadas (Elec.)",
+    "curso": "4K101",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Diseño de Experiencia de Usuario (UX) (Elec.)",
+    "curso": "4K103",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:30",
+          "horaFin": "13:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Sabado",
+          "horaInicio": "08:30",
+          "horaFin": "13:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Epistemología de las Ciencias de la Ingeniería (Elec.)",
+    "curso": "5K091",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Informática Industrial (Elec.)",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Ingeniería de Software",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Ingeniería de Software",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Ingeniería y Calidad de Software",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "A",
+    "materia": "Ingeniería y Calidad de Software",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "19:00",
+          "horaFin": "21:15"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Redes de Datos",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "13:45",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Redes de Datos",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Redes de Información",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "14:30",
+          "horaFin": "16:45"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "14:30",
+          "horaFin": "17:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Redes de Información",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "21:15",
+          "horaFin": "23:30"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "20:30",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Tecnologías para la Automatización",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Tecnologías para la Automatización",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Teoría de Control",
+    "curso": "4K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "4",
+    "dictado": "2",
+    "materia": "Teoría de Control",
+    "curso": "4K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Administración de Servicios en Linux (Elec.)",
+    "curso": "5K102",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "19:00",
+          "horaFin": "22:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Epistemología de las Ciencias de la Ingeniería (Elec.)",
+    "curso": "5K091",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Evaluación e Innovación de Tecnología desde la Perspectiva CTS (Elec.)",
+    "curso": "5K101",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Evaluación e Innovación de Tecnologías desde la Perspectiva CTS (Elec.)",
+    "curso": "5K101",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Formación de Emprendedores (Elec.)",
+    "curso": "7K2",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Formación de Emprendedores(Elec.)",
+    "curso": "7K2",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "16:00",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Gobierno Digital e Innovación (Elec.)",
+    "curso": "5K09",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ],
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Jueves",
+          "horaInicio": "16:45",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Metodología de la Ciencia (Elec.)",
+    "curso": "5K091",
+    "dias": {
+      "Plan-2023": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "08:00",
+          "horaFin": "12:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Proyecto Final",
+    "curso": "5K09",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "14:30",
+          "horaFin": "19:00"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "A",
+    "materia": "Proyecto Final",
+    "curso": "5K10",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Martes",
+          "horaInicio": "19:00",
+          "horaFin": "23:30"
+        }
+      ]
+    }
+  },
+  {
+    "año": "5",
+    "dictado": "2",
+    "materia": "Redes Neuronales Profundas (Elec.)",
+    "curso": "5K102",
+    "dias": {
+      "Plan-2008": [
+        {
+          "diaCursado": "Lunes",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Miércoles",
+          "horaInicio": "17:30",
+          "horaFin": "19:00"
+        },
+        {
+          "diaCursado": "Viernes",
+          "horaInicio": "17:30",
+          "horaFin": "20:30"
+        }
+      ]
+    }
+  }
+]
