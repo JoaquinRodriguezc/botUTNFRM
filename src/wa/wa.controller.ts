@@ -10,4 +10,5 @@ export class WaController {
     await this.waService.run();
     return 'ok';
   }
+
 }

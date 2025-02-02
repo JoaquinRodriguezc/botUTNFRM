@@ -21,6 +21,7 @@ interface MateriasMap {
 @Injectable()
 export class IaService {
   private materiasPorArchivo: MateriasMap | null = null;
+  private TOOL_SCHEMA_FILE_PATH = path.join(__dirname, 'tool_schema.json');
 
   async loadMaterias(): Promise<MateriasMap> {
     try {
@@ -52,10 +53,36 @@ export class IaService {
     }
   }
 
-  async processChatStream(response: Response) {
+  async loadToolSchema(): Promise<any> {
+    try {
+      console.log(
+        '\x1b[36m%s\x1b[0m',
+        'Intentando cargar el archivo tool_schema.json...',
+      );
+
+      const fileContent = await readFile(this.TOOL_SCHEMA_FILE_PATH, 'utf-8');
+      const TOOL_SCHEMA = JSON.parse(fileContent);
+
+      console.log(
+        '\x1b[32m%s\x1b[0m',
+        'Archivo tool_schema.json cargado correctamente.',
+      );
+      return TOOL_SCHEMA;
+    } catch (error: any) {
+      console.error(
+        '\x1b[31m%s\x1b[0m',
+        'Error al cargar tool_schema.json:',
+        error,
+      );
+      throw new Error(`No se pudo cargar tool_schema.json: ${error.message}`);
+    }
+  }
+
+  async processChatStream(response: Response, prompt) {
     try {
       const materias = await this.loadMaterias();
       const materiasString = JSON.stringify(materias, null, 2);
+      const tool_schema = await this.loadToolSchema()
 
       const { textStream } = streamText({
         model: openai('gpt-4o'),
@@ -77,7 +104,8 @@ ${materiasString}
 
 ## IMPORTANT
 - Your ability to detect errors and provide clear feedback will enhance the user experience.`,
-        prompt: '¿Qué materias hay en el json parsed-0?',
+        prompt: prompt,
+        tools: tool_schema,
       });
 
       // Configurar headers para streaming

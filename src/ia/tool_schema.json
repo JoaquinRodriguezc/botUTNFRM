@@ -1,0 +1,77 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "getMateriasByFile",
+      "description": "Obtiene las materias de un archivo específico o todas las materias si no se especifica archivo",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "description": "Nombre del archivo del cual obtener las materias (opcional)"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "getCourseSessions",
+      "description": "Obtiene todas las sesiones de cursos disponibles, incluyendo horarios, aulas y profesores",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "getCourseSessionsBySubject",
+      "description": "Obtiene las sesiones de curso para una materia específica, incluyendo horarios, aulas y profesores",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "subjectName": {
+            "type": "string",
+            "description": "Nombre completo de la materia a buscar"
+          }
+        },
+        "required": ["subjectName"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "getExamDates",
+      "description": "Obtiene todas las fechas de exámenes disponibles, incluyendo parciales y finales",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "getExamDatesBySubject",
+      "description": "Obtiene las fechas de exámenes para una materia específica, incluyendo parciales y finales",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "subjectName": {
+            "type": "string",
+            "description": "Nombre completo de la materia para buscar sus fechas de examen"
+          }
+        },
+        "required": ["subjectName"]
+      }
+    }
+  }
+]
