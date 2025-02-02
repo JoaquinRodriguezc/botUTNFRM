@@ -7,9 +7,10 @@ import {
   Subject,
 } from '../source.types';
 import { isEqual } from 'src/utils/utils';
+import { ConfigService } from '@nestjs/config';
 @Injectable()
 export class ParserStrategy {
-  constructor() {}
+  constructor(private configService: ConfigService) {}
 
   async getCourseSessions(): Promise<CourseSession[]> {
     const rawInfo = await Promise.all([
@@ -36,7 +37,7 @@ export class ParserStrategy {
     formData.append('especialidad', area);
 
     const response = await fetch(
-      'http://encuesta.frm.utn.edu.ar/horariocurso/',
+      this.configService.getOrThrow('COURSE_SESSION_URL'),
       {
         method: 'POST',
         headers: {
