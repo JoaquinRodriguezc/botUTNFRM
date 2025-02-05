@@ -4,8 +4,14 @@ meta {
   seq: 2
 }
 
-get {
+post {
   url: http://localhost:3001/chat
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "prompt": "Cuando se cursa Análisis Matemático II?"
+  }
 }

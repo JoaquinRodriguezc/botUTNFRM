@@ -5,7 +5,6 @@ import { SourceSubjectsService } from 'src/source/subjects/source.subjects.servi
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { Tools } from './tools';
-import { schema } from 'src/ia/schema';
 
 @Injectable()
 export class IaService {

@@ -6,7 +6,7 @@ import makeWASocket, {
 } from '@whiskeysockets/baileys';
 import { TagEveryone } from './wa.plugin.service';
 import { Inject } from '@nestjs/common';
-
+import { Agente } from './ia.plugin.service';
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -17,8 +17,8 @@ export class WaService {
   private logMessages: boolean;
   private plugins;
 
-  constructor(@Inject() private tagEveryone: TagEveryone) {
-    this.plugins = [tagEveryone];
+  constructor(@Inject() private tagEveryone: TagEveryone, private agente: Agente) {
+    this.plugins = [tagEveryone, agente];
     this.authFolder = 'auth';
     this.selfReply = false;
     this.logMessages = true;
