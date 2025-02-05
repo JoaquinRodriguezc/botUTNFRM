@@ -36,11 +36,9 @@ export class IaService {
         toolChoice: 'auto',
       });
       if (result.response && result.response.messages) {
-        // Se agregan todos los mensajes tal cual en el orden devuelto
         messages.push(...result.response.messages);
       }
 
-      // Nueva generación de respuesta a partir del contexto actualizado.
       console.log(
         '\x1b[36mGenerating final response with tool results...\x1b[0m',
       );
