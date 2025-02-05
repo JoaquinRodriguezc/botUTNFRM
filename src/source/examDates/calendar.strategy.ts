@@ -16,7 +16,6 @@ export class CalendarStrategy {
   }
   public async getExamDates() {
     const events = await this.calendarService.getEvents();
-    console.log(events);
     const mapa = this.parseEventString(events);
     return mapa;
   }
@@ -25,7 +24,6 @@ export class CalendarStrategy {
     let finalExamDates: FinalExam[] = [];
     events.forEach((event) => {
       const lines: string[] = this.getLines(event.description);
-      console.log(lines);
       lines.forEach((subjectName) => {
         const date = {
           day: event.start.date ?? null,

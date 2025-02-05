@@ -1,16 +1,20 @@
 import { Injectable } from '@nestjs/common';
-import { CoreMessage, generateText, streamText, tool } from 'ai';
+import { CoreMessage, generateText, tool } from 'ai';
 import { openai } from '@ai-sdk/openai';
 import { SourceSubjectsService } from 'src/source/subjects/source.subjects.service';
-import { schema } from './schema';
-import { z } from 'zod';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
+import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
+import { Tools } from './tools';
+import { schema } from 'src/ia/schema';
+
 @Injectable()
 export class IaService {
   constructor(
     private sourceSubService: SourceSubjectsService,
     private srcExamDatesService: SourceExamDateService,
+    private srcScheduleService: SourceScheduleService,
   ) {}
+
   async processChatStream(prompt: string) {
     console.log(prompt);
     const messages: CoreMessage[] = [];
@@ -26,41 +30,27 @@ export class IaService {
           'You will be asked for fetching final exam dates, please answer properly in coloquial spanish',
         messages,
         tools: {
-          getExamDates: tool({
-            description: 'Get dates for final exam for a given subject',
-            parameters: z.object({
-              subjectName: z
-                .string()
-                .describe('Subject name so we find dates for exam'),
-            }),
-            execute: async ({ subjectName }) => ({
-              subjectName,
-              dates:
-                await this.srcExamDatesService.getExamDatesBySubject(
-                  subjectName,
-                ),
-            }),
-          }),
+          getExamDates: new Tools(this.srcExamDatesService, this.srcScheduleService).getExamDatesTool,
+          getCourseSessions: new Tools(this.srcExamDatesService, this.srcScheduleService).getCourseSessionsTool,
         },
+        toolChoice: 'auto',
       });
-      const toolRes = result.response.messages.find((m) => m.role === 'tool');
-      messages.push({
-        role: toolRes.role,
-        content: [
-          {
-            toolCallId: toolRes.content[0].toolCallId,
-            type: 'tool-result',
-            toolName: toolRes.content[0].toolName,
-            result: toolRes.content[0].result,
-          },
-        ],
-      });
-      const res = await generateText({
+      if (result.response && result.response.messages) {
+        // Se agregan todos los mensajes tal cual en el orden devuelto
+        messages.push(...result.response.messages);
+      }
+
+      // Nueva generación de respuesta a partir del contexto actualizado.
+      console.log(
+        '\x1b[36mGenerating final response with tool results...\x1b[0m',
+      );
+      const finalResult = await generateText({
         model: openai('gpt-4o'),
         messages,
       });
-      return res.text;
-    } catch (error) {
+      console.log('\x1b[32m✅ Response generated successfully\x1b[0m');
+      return finalResult.text;
+    } catch (error: any) {
       console.error('Failed to process IA message', error);
       throw new Error(`Failed to process IA message: ${error.message}`);
     }
