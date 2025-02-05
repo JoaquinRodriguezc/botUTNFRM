@@ -9,11 +9,14 @@ export class CalendarStrategy {
 
   public async getSubjectExamDates(subject: string) {
     const dates = await this.getExamDates();
-    const subjectDate = dates.find((s) => s.subjectName === subject);
+    const subjectDate = dates.find(
+      (s) => s.subjectName.toLowerCase() === subject.toLowerCase(),
+    );
     return subjectDate;
   }
   public async getExamDates() {
     const events = await this.calendarService.getEvents();
+    console.log(events);
     const mapa = this.parseEventString(events);
     return mapa;
   }
@@ -22,6 +25,7 @@ export class CalendarStrategy {
     let finalExamDates: FinalExam[] = [];
     events.forEach((event) => {
       const lines: string[] = this.getLines(event.description);
+      console.log(lines);
       lines.forEach((subjectName) => {
         const date = {
           day: event.start.date ?? null,
@@ -43,13 +47,11 @@ export class CalendarStrategy {
     return finalExamDates;
   }
   private getLines(description: string): string[] {
-    const subjects = ['Control de Procesos'];
     if (!description) return [];
     return description
       .replace(/<p>|<b> <\/b>|<p dir="ltr">|<br>/g, ';')
       .replace(/\s*\(.*?\)\s*/g, '')
       .split(';')
-      .map((e) => e.trim().slice(0, -4))
-      .filter((e) => subjects.includes(e));
+      .map((e) => e.trim().slice(0, -4));
   }
 }

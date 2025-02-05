@@ -1,0 +1,280 @@
+{
+  "text": "",
+  "toolCalls": [
+    {
+      "type": "tool-call",
+      "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+      "toolName": "getExamDates",
+      "args": {
+        "subjectName": "Mecánica Eléctrica Industrial"
+      }
+    }
+  ],
+  "toolResults": [
+    {
+      "type": "tool-result",
+      "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+      "toolName": "getExamDates",
+      "args": {
+        "subjectName": "Mecánica Eléctrica Industrial"
+      },
+      "result": {
+        "subjectName": "Mecánica Eléctrica Industrial",
+        "dates": {
+          "subjectName": "Mecánica Eléctrica Industrial",
+          "examDays": [
+            {
+              "day": "2025-02-14",
+              "startTime": null,
+              "endTime": null
+            },
+            {
+              "day": "2025-02-28",
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "finishReason": "tool-calls",
+  "usage": {
+    "promptTokens": 88,
+    "completionTokens": 24,
+    "totalTokens": 112
+  },
+  "warnings": [],
+  "request": {
+    "body": "{\"model\":\"gpt-4o\",\"temperature\":0,\"messages\":[{\"role\":\"system\",\"content\":\"You will be asked for fetching final exam dates, please answer properly in coloquial spanish\"},{\"role\":\"user\",\"content\":\"cuando se rinde Mecánica Eléctrica Industrial\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"getExamDates\",\"description\":\"Get dates for final exam for a given subject\",\"parameters\":{\"type\":\"object\",\"properties\":{\"subjectName\":{\"type\":\"string\",\"description\":\"Subject name so we find dates for exam\"}},\"required\":[\"subjectName\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}}}],\"tool_choice\":\"auto\"}"
+  },
+  "response": {
+    "id": "chatcmpl-AxNUDwNeKYoktHtAx9rfsgt5p5g7M",
+    "timestamp": "2025-02-05T00:23:17.000Z",
+    "modelId": "gpt-4o-2024-08-06",
+    "headers": {
+      "access-control-expose-headers": "X-Request-ID",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "90cec03cbefa2014-EZE",
+      "connection": "close",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 05 Feb 2025 00:23:18 GMT",
+      "openai-organization": "joaco-agxwl0",
+      "openai-processing-ms": "1255",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "_cfuvid=JYp_hfjC_IhtxLwZ_TDACm1dXXoEBVNyHXF8H_WmPdQ-1738714998692-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-content-type-options": "nosniff",
+      "x-ratelimit-limit-requests": "500",
+      "x-ratelimit-limit-tokens": "30000",
+      "x-ratelimit-remaining-requests": "499",
+      "x-ratelimit-remaining-tokens": "29947",
+      "x-ratelimit-reset-requests": "120ms",
+      "x-ratelimit-reset-tokens": "106ms",
+      "x-request-id": "req_67a6ee67455cb8205f697f202b56a06e"
+    },
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+            "toolName": "getExamDates",
+            "args": {
+              "subjectName": "Mecánica Eléctrica Industrial"
+            }
+          }
+        ],
+        "id": "msg-Z2yt7DcFTsM1z5cl3YfScEhj"
+      },
+      {
+        "role": "tool",
+        "id": "msg-ZdYp6yitbjs9RCMRaiKnuzKt",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+            "toolName": "getExamDates",
+            "result": {
+              "subjectName": "Mecánica Eléctrica Industrial",
+              "dates": {
+                "subjectName": "Mecánica Eléctrica Industrial",
+                "examDays": [
+                  {
+                    "day": "2025-02-14",
+                    "startTime": null,
+                    "endTime": null
+                  },
+                  {
+                    "day": "2025-02-28",
+                    "startTime": null,
+                    "endTime": null
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "steps": [
+    {
+      "stepType": "initial",
+      "text": "",
+      "toolCalls": [
+        {
+          "type": "tool-call",
+          "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+          "toolName": "getExamDates",
+          "args": {
+            "subjectName": "Mecánica Eléctrica Industrial"
+          }
+        }
+      ],
+      "toolResults": [
+        {
+          "type": "tool-result",
+          "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+          "toolName": "getExamDates",
+          "args": {
+            "subjectName": "Mecánica Eléctrica Industrial"
+          },
+          "result": {
+            "subjectName": "Mecánica Eléctrica Industrial",
+            "dates": {
+              "subjectName": "Mecánica Eléctrica Industrial",
+              "examDays": [
+                {
+                  "day": "2025-02-14",
+                  "startTime": null,
+                  "endTime": null
+                },
+                {
+                  "day": "2025-02-28",
+                  "startTime": null,
+                  "endTime": null
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "finishReason": "tool-calls",
+      "usage": {
+        "promptTokens": 88,
+        "completionTokens": 24,
+        "totalTokens": 112
+      },
+      "warnings": [],
+      "request": {
+        "body": "{\"model\":\"gpt-4o\",\"temperature\":0,\"messages\":[{\"role\":\"system\",\"content\":\"You will be asked for fetching final exam dates, please answer properly in coloquial spanish\"},{\"role\":\"user\",\"content\":\"cuando se rinde Mecánica Eléctrica Industrial\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"getExamDates\",\"description\":\"Get dates for final exam for a given subject\",\"parameters\":{\"type\":\"object\",\"properties\":{\"subjectName\":{\"type\":\"string\",\"description\":\"Subject name so we find dates for exam\"}},\"required\":[\"subjectName\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}}}],\"tool_choice\":\"auto\"}"
+      },
+      "response": {
+        "id": "chatcmpl-AxNUDwNeKYoktHtAx9rfsgt5p5g7M",
+        "timestamp": "2025-02-05T00:23:17.000Z",
+        "modelId": "gpt-4o-2024-08-06",
+        "headers": {
+          "access-control-expose-headers": "X-Request-ID",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "90cec03cbefa2014-EZE",
+          "connection": "close",
+          "content-encoding": "br",
+          "content-type": "application/json",
+          "date": "Wed, 05 Feb 2025 00:23:18 GMT",
+          "openai-organization": "joaco-agxwl0",
+          "openai-processing-ms": "1255",
+          "openai-version": "2020-10-01",
+          "server": "cloudflare",
+          "set-cookie": "_cfuvid=JYp_hfjC_IhtxLwZ_TDACm1dXXoEBVNyHXF8H_WmPdQ-1738714998692-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "transfer-encoding": "chunked",
+          "x-content-type-options": "nosniff",
+          "x-ratelimit-limit-requests": "500",
+          "x-ratelimit-limit-tokens": "30000",
+          "x-ratelimit-remaining-requests": "499",
+          "x-ratelimit-remaining-tokens": "29947",
+          "x-ratelimit-reset-requests": "120ms",
+          "x-ratelimit-reset-tokens": "106ms",
+          "x-request-id": "req_67a6ee67455cb8205f697f202b56a06e"
+        },
+        "messages": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": ""
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+                "toolName": "getExamDates",
+                "args": {
+                  "subjectName": "Mecánica Eléctrica Industrial"
+                }
+              }
+            ],
+            "id": "msg-Z2yt7DcFTsM1z5cl3YfScEhj"
+          },
+          {
+            "role": "tool",
+            "id": "msg-ZdYp6yitbjs9RCMRaiKnuzKt",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "call_JfzqTToJ0QfU3UeRX0QYnmLt",
+                "toolName": "getExamDates",
+                "result": {
+                  "subjectName": "Mecánica Eléctrica Industrial",
+                  "dates": {
+                    "subjectName": "Mecánica Eléctrica Industrial",
+                    "examDays": [
+                      {
+                        "day": "2025-02-14",
+                        "startTime": null,
+                        "endTime": null
+                      },
+                      {
+                        "day": "2025-02-28",
+                        "startTime": null,
+                        "endTime": null
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_providerMetadata": {
+        "openai": {
+          "reasoningTokens": 0,
+          "acceptedPredictionTokens": 0,
+          "rejectedPredictionTokens": 0,
+          "cachedPromptTokens": 0
+        }
+      },
+      "isContinued": false
+    }
+  ],
+  "experimental_providerMetadata": {
+    "openai": {
+      "reasoningTokens": 0,
+      "acceptedPredictionTokens": 0,
+      "rejectedPredictionTokens": 0,
+      "cachedPromptTokens": 0
+    }
+  }
+}

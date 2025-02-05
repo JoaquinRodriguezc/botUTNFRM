@@ -1,5 +1,5 @@
-import { Injectable } from "@nestjs/common";
-import { IaService } from "../ia/ia.service";
+import { Injectable } from '@nestjs/common';
+import { IaService } from '../ia/ia.service';
 import { Response } from 'express';
 
 @Injectable()
@@ -9,9 +9,7 @@ export class WaIaService {
   private sendMessage;
   private trigger;
 
-  constructor(
-    private readonly iaService: IaService
-  ) {
+  constructor(private readonly iaService: IaService) {
     this.trigger = 'all';
   }
 
@@ -28,8 +26,8 @@ export class WaIaService {
       // Enviar mensaje de "pensando"
       await this.sendMessage(
         key.remoteJid,
-        { text: "Pensando..." },
-        { quoted: { key, message } }
+        { text: 'Pensando...' },
+        { quoted: { key, message } },
       );
 
       let fullResponse = '';
@@ -51,15 +49,19 @@ export class WaIaService {
         app: null,
       } as unknown as Response;
 
-      await this.iaService.processChatStream(mockResponse, prompt);
+      await this.iaService.processChatStream(prompt);
 
       await this.sendMessage(
         key.remoteJid,
         { text: fullResponse.trim() },
-        { quoted: { key, message } }
+        { quoted: { key, message } },
       );
     } catch (error) {
-      console.error('\x1b[31m%s\x1b[0m', 'Error en el procesamiento de IA:', error);
+      console.error(
+        '\x1b[31m%s\x1b[0m',
+        'Error en el procesamiento de IA:',
+        error,
+      );
     }
   }
 }

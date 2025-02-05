@@ -1,14 +1,12 @@
-import { Controller, Post, Get, Res, Body } from '@nestjs/common';
-import { Response } from 'express';
+import { Controller, Post, Body } from '@nestjs/common';
 import { IaService } from './ia.service';
 
 @Controller('chat')
 export class IaController {
   constructor(private readonly iaService: IaService) {}
 
-
-  @Post('chat')
-  async chat(@Res() res: Response, @Body('prompt') prompt: string) {
-    return this.iaService.processChatStream(res, prompt);
+  @Post()
+  async chat(@Body() body: { prompt: string }) {
+    return await this.iaService.processChatStream(body.prompt);
   }
 }
