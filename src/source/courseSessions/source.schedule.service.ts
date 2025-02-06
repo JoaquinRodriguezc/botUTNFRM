@@ -9,7 +9,11 @@ export class SourceScheduleService {
   }
   async getCourseSessionsBySubject(subjectName: string) {
     const sessions = await this.parserStrategy.getCourseSessionsBySubject(subjectName);
-    console.log(sessions)
     return sessions
+  }
+  async getCourseSessionsBySubjectComission(subjectName: string, commission:string) {
+    const sessionsbyCommission = await this.parserStrategy.getCourseSessionsBySubjectComission(subjectName, commission);
+    console.log(sessionsbyCommission)
+    return sessionsbyCommission
   }
 }

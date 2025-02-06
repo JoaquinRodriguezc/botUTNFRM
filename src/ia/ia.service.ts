@@ -1,32 +1,37 @@
 import { Injectable } from '@nestjs/common';
-import { CoreMessage, generateText, tool } from 'ai';
+import { CoreMessage, generateText } from 'ai';
 import { openai } from '@ai-sdk/openai';
-import { SourceSubjectsService } from 'src/source/subjects/source.subjects.service';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { Tools } from './tools';
+import { SystemPromptService } from './systemprompt';
 
 @Injectable()
 export class IaService {
   constructor(
-    private sourceSubService: SourceSubjectsService,
     private srcExamDatesService: SourceExamDateService,
     private srcScheduleService: SourceScheduleService,
-  ) {}
+    private system: SystemPromptService, 
+  ) { }
 
   async processChatStream(prompt: string) {
     console.log(prompt);
+    const systemprompt = await this.system.getSystemPrompt();
     const messages: CoreMessage[] = [];
-    messages.push({
+    messages.push(
+      {
+        role:'system',
+        content: systemprompt,
+      },
+      {
       role: 'user',
       content: prompt,
-    });
+      }
+    );
     try {
-      const subjects = await this.sourceSubService.getSubjects();
+      
       const result = await generateText({
         model: openai('gpt-4o'),
-        system:
-          'You will be asked for fetching final exam dates or course sessions, please answer properly in coloquial spanish',
         messages,
         tools: {
           getExamDates: new Tools(
@@ -37,6 +42,10 @@ export class IaService {
             this.srcExamDatesService,
             this.srcScheduleService,
           ).getCourseSessionsTool,
+          getCourseSessionsByComission: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+          ).getCourseSessionsByComissionTool,
         },
         toolChoice: 'auto',
       });

@@ -119,7 +119,7 @@ export class WaService {
     return this.messageStore[key.id!];
   };
   private getBotId() {
-    return this.socket.user?.id.split(':')[0];
+    return '5492617109583';
   }
   private getText(key: proto.IMessageKey, message: proto.IMessage): string {
     try {
