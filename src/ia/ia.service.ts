@@ -26,11 +26,17 @@ export class IaService {
       const result = await generateText({
         model: openai('gpt-4o'),
         system:
-          'You will be asked for fetching final exam dates, please answer properly in coloquial spanish',
+          'You will be asked for fetching final exam dates or course sessions, please answer properly in coloquial spanish',
         messages,
         tools: {
-          getExamDates: new Tools(this.srcExamDatesService, this.srcScheduleService).getExamDatesTool,
-          getCourseSessions: new Tools(this.srcExamDatesService, this.srcScheduleService).getCourseSessionsTool,
+          getExamDates: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+          ).getExamDatesTool,
+          getCourseSessions: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+          ).getCourseSessionsTool,
         },
         toolChoice: 'auto',
       });

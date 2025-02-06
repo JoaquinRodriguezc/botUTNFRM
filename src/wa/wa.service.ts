@@ -6,7 +6,7 @@ import makeWASocket, {
 } from '@whiskeysockets/baileys';
 import { TagEveryone } from './wa.plugin.service';
 import { Inject } from '@nestjs/common';
-import { Agente } from './ia.plugin.service';
+import { IAWhatsappPluginService } from './ia.plugin.service';
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -17,8 +17,11 @@ export class WaService {
   private logMessages: boolean;
   private plugins;
 
-  constructor(@Inject() private tagEveryone: TagEveryone, private agente: Agente) {
-    this.plugins = [tagEveryone, agente];
+  constructor(
+    @Inject() private tagEveryone: TagEveryone,
+    private wspIaService: IAWhatsappPluginService,
+  ) {
+    this.plugins = [tagEveryone, wspIaService];
     this.authFolder = 'auth';
     this.selfReply = false;
     this.logMessages = true;
@@ -81,11 +84,25 @@ export class WaService {
 
         messages.forEach(async (msg) => {
           const { key, message } = msg;
+          let mentions =
+            message?.extendedTextMessage?.contextInfo?.mentionedJid;
 
-          if (!message || this.getText(key, message).includes(this.emptyChar))
-            return;
-
-          this.plugins.forEach((plugin) => plugin.process(key, message));
+          if (mentions) {
+            mentions = mentions.map((mention) => mention.split('@')[0]);
+          }
+          console.log('User', this.getBotId());
+          console.log('Mentions', mentions);
+          if (mentions?.length > 0) {
+            console.log('son iguales', this.getBotId() === mentions[0]);
+          }
+          const findMe = mentions?.find((m) => m === this.getBotId());
+          console.log('yo?', findMe);
+          if (findMe) {
+            console.log('He sido mencionado', mentions, this.getBotId());
+            if (!message || this.getText(key, message).includes(this.emptyChar))
+              return;
+            this.plugins.forEach((plugin) => plugin.process(key, message));
+          }
         });
       }
     });
@@ -101,7 +118,9 @@ export class WaService {
   ): proto.IMessage | undefined => {
     return this.messageStore[key.id!];
   };
-
+  private getBotId() {
+    return this.socket.user?.id.split(':')[0];
+  }
   private getText(key: proto.IMessageKey, message: proto.IMessage): string {
     try {
       let text =

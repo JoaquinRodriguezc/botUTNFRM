@@ -1,17 +1,18 @@
 import { Injectable } from '@nestjs/common';
-import {IaService} from '../ia/ia.service';
+import { IaService } from '../ia/ia.service';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
-export class Agente {
+export class IAWhatsappPluginService {
   private socket;
   private getText;
   private sendMessage;
   private membersLimit;
-  private trigger;
-
-  constructor(private iaService: IaService) {
+  constructor(
+    private iaService: IaService,
+    private configService: ConfigService,
+  ) {
     this.membersLimit = 100;
-    this.trigger = '';
   }
 
   public init(socket, getText, sendMessage) {
@@ -22,12 +23,11 @@ export class Agente {
 
   async process(key, message) {
     const text = this.getText(key, message);
-    if (!text.toLowerCase().includes('!' + this.trigger)) return;
 
     try {
       const grp = await this.socket.groupMetadata(key.remoteJid);
-      const members = grp.participants; 
-      const response = await this.iaService.processChatStream(text)
+      const members = grp.participants;
+      const response = await this.iaService.processChatStream(text);
       const mentions = [];
       const items = [];
 

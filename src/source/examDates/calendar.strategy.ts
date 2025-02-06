@@ -17,6 +17,7 @@ export class CalendarStrategy {
   public async getExamDates() {
     const events = await this.calendarService.getEvents();
     const mapa = this.parseEventString(events);
+    console.log(mapa);
     return mapa;
   }
 
