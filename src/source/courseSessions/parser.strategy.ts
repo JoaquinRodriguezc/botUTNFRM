@@ -6,7 +6,7 @@ import {
   ScheduleEntry,
   Subject,
 } from '../source.types';
-import { isEqual } from 'src/utils/utils';
+import { isEqual, normalize } from 'src/utils/utils';
 import { ConfigService } from '@nestjs/config';
 @Injectable()
 export class ParserStrategy {
@@ -29,7 +29,20 @@ export class ParserStrategy {
     subjectName: string,
   ): Promise<CourseSession[]> {
     const courseSessions = await this.getCourseSessions();
-    return courseSessions.filter((c) => c.subject.name === subjectName);
+    return courseSessions.filter(
+      (c) => normalize(c.subject.name) === normalize(subjectName),
+    );
+  }
+  async getCourseSessionsBySubjectComission(
+    subjectName: string,
+    commission: string,
+  ) {
+    const courseSessions = await this.getCourseSessions();
+    return courseSessions.filter(
+      (c) =>
+        normalize(c.subject.name) === normalize(subjectName) &&
+        normalize(c.subject.courseCode) === normalize(commission),
+    );
   }
   private async getRawCourseSessions(area: string) {
     const formData = new URLSearchParams();

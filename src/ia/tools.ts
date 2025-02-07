@@ -39,4 +39,24 @@ export class Tools {
                 ),
         }),
     });
+
+    getCourseSessionsByComissionTool = tool({
+        description: 'Get course sessions for a specific subject and commission',
+        parameters: z.object({
+            subjectName: z
+                .string()
+                .describe('Subject name to find course sessions'),
+            commission: z
+                .string()
+                .describe('Commission number or identifier'),
+        }),
+        execute: async ({ subjectName, commission }) => ({
+            subjectName,
+            commission,
+            dates: await this.srcScheduleService.getCourseSessionsBySubjectComission(
+                subjectName,
+                commission,
+            ),
+        }),
+    });
 }
