@@ -3,33 +3,32 @@ import { CoreMessage, generateText } from 'ai';
 import { openai } from '@ai-sdk/openai';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
+import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
 import { Tools } from './tools';
 import { SystemPromptService } from './systemprompt';
-
 @Injectable()
 export class IaService {
   constructor(
     private srcExamDatesService: SourceExamDateService,
     private srcScheduleService: SourceScheduleService,
-    private system: SystemPromptService, 
-  ) { }
+    private srcOfficeHours: SourceOfficeHours,
+    private system: SystemPromptService,
+  ) {}
 
   async processChatStream(prompt: string) {
     console.log(prompt);
     const systemprompt = await this.system.getSystemPrompt();
-    const messages: CoreMessage[] = [];
-    messages.push(
+    const messages: CoreMessage[] = [
       {
-        role:'system',
+        role: 'system',
         content: systemprompt,
       },
       {
-      role: 'user',
-      content: prompt,
-      }
-    );
+        role: 'user',
+        content: prompt,
+      },
+    ];
     try {
-      
       const result = await generateText({
         model: openai('gpt-4o'),
         messages,
@@ -37,15 +36,23 @@ export class IaService {
           getExamDates: new Tools(
             this.srcExamDatesService,
             this.srcScheduleService,
+            this.srcOfficeHours,
           ).getExamDatesTool,
           getCourseSessions: new Tools(
             this.srcExamDatesService,
             this.srcScheduleService,
+            this.srcOfficeHours,
           ).getCourseSessionsTool,
           getCourseSessionsByComission: new Tools(
             this.srcExamDatesService,
             this.srcScheduleService,
+            this.srcOfficeHours,
           ).getCourseSessionsByComissionTool,
+          getOfficeByDepartmentTool: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+            this.srcOfficeHours,
+          ).getOfficeByDepartmentTool,
         },
         toolChoice: 'auto',
       });
@@ -61,6 +68,7 @@ export class IaService {
         messages,
       });
       console.log('\x1b[32m✅ Response generated successfully\x1b[0m');
+      messages.push(...finalResult.response.messages);
       return finalResult.text;
     } catch (error: any) {
       console.error('Failed to process IA message', error);
