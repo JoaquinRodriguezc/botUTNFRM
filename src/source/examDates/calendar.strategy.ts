@@ -2,7 +2,7 @@ import { calendar_v3 } from 'googleapis';
 import { GoogleCalendarService } from './calendar.client';
 import { Injectable } from '@nestjs/common';
 import { FinalExam } from '../source.types';
-
+import * as departments from './departments.json';
 @Injectable()
 export class CalendarStrategy {
   constructor(private calendarService: GoogleCalendarService) {}
@@ -46,11 +46,25 @@ export class CalendarStrategy {
     return finalExamDates;
   }
   private getLines(description: string): string[] {
+    console.log(description);
     if (!description) return [];
-    return description
-      .replace(/<p>|<b> <\/b>|<p dir="ltr">|<br>/g, ';')
-      .replace(/\s*\(.*?\)\s*/g, '')
+    const d = description
+      .replaceAll(/:|<\/p>|<b>.*?<\/b>|<p>|<b> <\/b>|<p dir="ltr">|<br>/g, ';')
+      .replaceAll(/\s*\(.*?\)\s*/g, '')
+      .replaceAll(/Mesas correspondientes al día/g, '')
       .split(';')
-      .map((e) => e.trim().slice(0, -4));
+      .filter((line) => {
+        let flag = false;
+        departments.forEach((deparment) => {
+          if (line.includes(deparment)) {
+            flag = true;
+          }
+        });
+        if (!flag) return line;
+      })
+      .map((line) => line.trim())
+      .filter((line) => line !== '');
+    console.log(d);
+    return d;
   }
 }

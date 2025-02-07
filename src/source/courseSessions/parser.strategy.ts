@@ -120,9 +120,15 @@ export class ParserStrategy {
     });
     return courseSessions;
   }
+  private cleanRow(row: string) {
+    return row.replaceAll(
+      /<center>|<\/center>|<td>|<tr class='color\d+'>/g,
+      '',
+    );
+  }
+
   private parseHTMLRow(row: string): ParsedRowType {
-    const info = row
-      .replaceAll('<td>', '')
+    const info = this.cleanRow(row)
       .split('</td>')
       .map((e) => e.trim());
     return {

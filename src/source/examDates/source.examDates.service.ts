@@ -9,7 +9,6 @@ export class SourceExamDateService {
   }
   async getExamDatesBySubject(subjectName: string) {
     const res = await this.calendarStrategy.getSubjectExamDates(subjectName);
-    console.log(res);
     return res;
   }
 }
