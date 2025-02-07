@@ -7,6 +7,7 @@ import makeWASocket, {
 import { TagEveryone } from './wa.plugin.service';
 import { Inject } from '@nestjs/common';
 import { IAWhatsappPluginService } from './ia.plugin.service';
+import { ConfigService } from '@nestjs/config';
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -20,6 +21,7 @@ export class WaService {
   constructor(
     @Inject() private tagEveryone: TagEveryone,
     private wspIaService: IAWhatsappPluginService,
+    private configService: ConfigService,
   ) {
     this.plugins = [tagEveryone, wspIaService];
     this.authFolder = 'auth';
@@ -96,7 +98,6 @@ export class WaService {
             console.log('son iguales', this.getBotId() === mentions[0]);
           }
           const findMe = mentions?.find((m) => m === this.getBotId());
-          console.log('yo?', findMe);
           if (findMe) {
             console.log('He sido mencionado', mentions, this.getBotId());
             if (!message || this.getText(key, message).includes(this.emptyChar))
@@ -119,7 +120,7 @@ export class WaService {
     return this.messageStore[key.id!];
   };
   private getBotId() {
-    return '5492617109583';
+    return this.configService.getOrThrow('BOT_NUMBER');
   }
   private getText(key: proto.IMessageKey, message: proto.IMessage): string {
     try {
