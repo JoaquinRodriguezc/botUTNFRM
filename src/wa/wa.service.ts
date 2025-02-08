@@ -3,6 +3,7 @@ import makeWASocket, {
   useMultiFileAuthState,
   WASocket,
   proto,
+  getContentType,
 } from '@whiskeysockets/baileys';
 import { TagEveryone } from './wa.plugin.service';
 import { Inject } from '@nestjs/common';
@@ -112,9 +113,13 @@ export class WaService {
   }
 
   private haveToHandle({ key, message }) {
+    if (
+      this.isBanned(key) ||
+      getContentType(message) !== 'extendedTextMessage'
+    ) {
+      return false;
+    }
     let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
-
-    if (this.isBanned(key)) return false;
 
     if (mentions) {
       mentions = mentions.map((mention) => mention.split('@')[0]);
