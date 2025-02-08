@@ -7,16 +7,17 @@ export class TagEveryone {
   private sendMessage;
   private membersLimit;
   private trigger;
-
+  private setUsersNotActive;
   constructor() {
     this.membersLimit = 100;
     this.trigger = 'all';
   }
 
-  public init(socket, getText, sendMessage) {
+  public init(socket, getText, sendMessage, setUsersNotActive) {
     this.socket = socket;
     this.getText = getText;
     this.sendMessage = sendMessage;
+    this.setUsersNotActive = setUsersNotActive;
   }
 
   async process(key, message) {
@@ -42,8 +43,7 @@ export class TagEveryone {
           { text: `Mencionando a todos.`, mentions },
           { quoted: { key, message } },
         );
-    } catch (err) {
-      console.log('ERROR in TagEveryone:', err);
-    }
+      this.setUsersNotActive(key.participant);
+    } catch (err) {}
   }
 }

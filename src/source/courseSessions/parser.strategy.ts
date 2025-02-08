@@ -8,11 +8,14 @@ import {
 } from '../source.types';
 import { isEqual, normalize } from 'src/utils/utils';
 import { ConfigService } from '@nestjs/config';
+import * as fs from 'node:fs/promises';
+import { Cron, CronExpression } from '@nestjs/schedule';
 @Injectable()
 export class ParserStrategy {
   constructor(private configService: ConfigService) {}
 
-  async getCourseSessions(): Promise<CourseSession[]> {
+  @Cron(CronExpression.EVERY_DAY_AT_10AM)
+  async fetchAndSaveCourseSessions(): Promise<void> {
     const rawInfo = await Promise.all([
       ...Object.values(Degrees).map((d) => {
         return this.getRawCourseSessions(d);
@@ -23,7 +26,28 @@ export class ParserStrategy {
         return this.parseRawTable(h);
       })
       .flat();
-    return courseSessions;
+    try {
+      console.log('Writing courseSessions');
+      await fs.writeFile(
+        './src/source/courseSessions/courseSessions.json',
+        JSON.stringify(courseSessions),
+      );
+    } catch (e) {
+      console.log('Error saving courseSessions', e);
+    }
+  }
+  async getCourseSessions(): Promise<CourseSession[]> {
+    try {
+      const file = await fs.readFile(
+        './src/source/courseSessions/courseSessions.json',
+      );
+      const sessions = JSON.parse(file.toString());
+      return sessions;
+    } catch (e) {
+      console.log('Error while loading course sessions', e);
+      await this.fetchAndSaveCourseSessions();
+      return [];
+    }
   }
   async getCourseSessionsBySubject(
     subjectName: string,

@@ -8,6 +8,7 @@ export class IAWhatsappPluginService {
   private getText;
   private sendMessage;
   private membersLimit;
+  private setUsersNotActive;
   constructor(
     private iaService: IaService,
     private configService: ConfigService,
@@ -15,10 +16,11 @@ export class IAWhatsappPluginService {
     this.membersLimit = 100;
   }
 
-  public init(socket, getText, sendMessage) {
+  public init(socket, getText, sendMessage, setUsersNotActive) {
     this.socket = socket;
     this.getText = getText;
     this.sendMessage = sendMessage;
+    this.setUsersNotActive = setUsersNotActive;
   }
 
   async process(key, message) {
@@ -41,6 +43,7 @@ export class IAWhatsappPluginService {
           { text: response },
           { quoted: { key, message } },
         );
+      this.setUsersNotActive(key.participant);
     } catch (err) {
       console.log('Error processing messages:', err);
     }

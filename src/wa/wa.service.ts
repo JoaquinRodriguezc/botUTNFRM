@@ -8,6 +8,7 @@ import { TagEveryone } from './wa.plugin.service';
 import { Inject } from '@nestjs/common';
 import { IAWhatsappPluginService } from './ia.plugin.service';
 import { ConfigService } from '@nestjs/config';
+import debounce from 'src/utils/utils';
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -17,7 +18,7 @@ export class WaService {
   private saveCredentials!: () => Promise<void>;
   private logMessages: boolean;
   private plugins;
-
+  private usersActive: string[];
   constructor(
     @Inject() private tagEveryone: TagEveryone,
     private wspIaService: IAWhatsappPluginService,
@@ -27,6 +28,8 @@ export class WaService {
     this.authFolder = 'auth';
     this.selfReply = false;
     this.logMessages = true;
+    this.restart();
+    this.usersActive = [];
   }
 
   async connect(): Promise<void> {
@@ -44,6 +47,7 @@ export class WaService {
         this.socket,
         this.getText.bind(this),
         this.sendMessage.bind(this),
+        this.setUsersNotActive.bind(this),
       ),
     );
   }
@@ -82,31 +86,61 @@ export class WaService {
       if (events['messages.upsert']) {
         const { messages } = events['messages.upsert'];
 
-        if (this.logMessages) console.log('msg upsert', messages);
+        // if (this.logMessages) console.log('msg upsert', messages);
 
-        messages.forEach(async (msg) => {
+        messages.forEach(async (msg: Message) => {
           const { key, message } = msg;
-          let mentions =
-            message?.extendedTextMessage?.contextInfo?.mentionedJid;
-
-          if (mentions) {
-            mentions = mentions.map((mention) => mention.split('@')[0]);
-          }
-          console.log('User', this.getBotId());
-          console.log('Mentions', mentions);
-          if (mentions?.length > 0) {
-            console.log('son iguales', this.getBotId() === mentions[0]);
-          }
-          const findMe = mentions?.find((m) => m === this.getBotId());
-          if (findMe) {
-            console.log('He sido mencionado', mentions, this.getBotId());
-            if (!message || this.getText(key, message).includes(this.emptyChar))
-              return;
-            this.plugins.forEach((plugin) => plugin.process(key, message));
-          }
+          const handle = this.haveToHandle({ key, message });
+          if (!handle) return;
+          this.plugins.forEach((plugin) => plugin.process(key, message));
         });
       }
     });
+  }
+  public setUsersNotActive(userKey: string) {
+    console.log('filtering');
+    this.usersActive = this.usersActive.filter((u) => u !== userKey);
+  }
+
+  private haveToHandle({ key, message }) {
+    let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
+
+    if (mentions) {
+      mentions = mentions.map((mention) => mention.split('@')[0]);
+    }
+
+    const itsMe = mentions?.find((m) => m === this.getBotId());
+    /**
+     * Just answer if it's tagged
+     */
+
+    if (
+      !itsMe ||
+      !message ||
+      this.getText(key, message).includes(this.emptyChar)
+    ) {
+      return false;
+    }
+    const isOnGoingResponse = this.userHasOnGoingResponse(key.participant);
+    if (isOnGoingResponse) {
+      console.log(
+        `User ${key.participant} has ongoing response. Ignoring message`,
+      );
+      return false;
+    }
+
+    console.log(
+      `Handling message for ${key.participant} with name ${key.pushName}`,
+    );
+    return true;
+  }
+
+  private userHasOnGoingResponse(userKey: string) {
+    if (this.usersActive?.includes(userKey)) {
+      return true;
+    }
+    this.usersActive.push(userKey);
+    return false;
   }
 
   private async restart(): Promise<void> {
@@ -153,3 +187,15 @@ export class WaService {
     }
   }
 }
+type Message = {
+  key: {
+    remoteJid: string;
+    fromMe: boolean;
+    id: string;
+    participant: string;
+  };
+  messageTimestamp: number;
+  pushName: string;
+  broadcast: boolean;
+  message: any;
+};

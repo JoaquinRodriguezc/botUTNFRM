@@ -3,6 +3,8 @@ import { GoogleCalendarService } from './calendar.client';
 import { Injectable } from '@nestjs/common';
 import { FinalExam } from '../source.types';
 import * as departments from './departments.json';
+import { Cron, CronExpression } from '@nestjs/schedule';
+import * as fs from 'node:fs/promises';
 @Injectable()
 export class CalendarStrategy {
   constructor(private calendarService: GoogleCalendarService) {}
@@ -14,11 +16,31 @@ export class CalendarStrategy {
     );
     return subjectDate;
   }
-  public async getExamDates() {
+  @Cron(CronExpression.EVERY_HOUR)
+  public async fetchAndSaveDate(): Promise<void> {
     const events = await this.calendarService.getEvents();
     const mapa = this.parseEventString(events);
-    console.log(mapa);
-    return mapa;
+    try {
+      await fs.writeFile(
+        'src/source/examDates/finalExamdDates.json',
+        JSON.stringify(mapa),
+      );
+    } catch (error) {
+      console.log('Error saving final exam dates', error);
+    }
+  }
+  public async getExamDates() {
+    try {
+      const file = await fs.readFile(
+        'src/source/examDates/finalExamdDates.json',
+      );
+      const dates = JSON.parse(file.toString());
+      return dates;
+    } catch (error) {
+      console.log('Error while loading exam dates', error);
+      await this.fetchAndSaveDate();
+      return [];
+    }
   }
 
   private parseEventString(events: calendar_v3.Schema$Event[]): FinalExam[] {
