@@ -100,7 +100,7 @@ export class WaService {
 
         messages.forEach(async (msg: Message) => {
           const { key, message } = msg;
-          const handle = this.haveToHandle({ key, message });
+          const handle = this.shouldHandle({ key, message });
           if (!handle) return;
           this.plugins.forEach((plugin) => plugin.process(key, message));
         });
@@ -108,12 +108,15 @@ export class WaService {
     });
   }
   public setUsersNotActive(userKey: string) {
-    console.log('filtering');
     this.usersActive = this.usersActive.filter((u) => u !== userKey);
   }
 
-  private haveToHandle({ key, message }) {
+  private shouldHandle({ key, message }) {
+    const text = this.getText(key, message);
+    console.log(text, text.length);
     if (
+      text.length < 25 ||
+      text.length > 90 ||
       this.isBanned(key) ||
       getContentType(message) !== 'extendedTextMessage'
     ) {
