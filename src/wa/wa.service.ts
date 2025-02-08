@@ -8,7 +8,7 @@ import { TagEveryone } from './wa.plugin.service';
 import { Inject } from '@nestjs/common';
 import { IAWhatsappPluginService } from './ia.plugin.service';
 import { ConfigService } from '@nestjs/config';
-import debounce from 'src/utils/utils';
+import * as fs from 'node:fs/promises';
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -18,6 +18,7 @@ export class WaService {
   private saveCredentials!: () => Promise<void>;
   private logMessages: boolean;
   private plugins;
+  private bannedUsers: string[];
   private usersActive: string[];
   constructor(
     @Inject() private tagEveryone: TagEveryone,
@@ -28,10 +29,18 @@ export class WaService {
     this.authFolder = 'auth';
     this.selfReply = false;
     this.logMessages = true;
-    this.restart();
     this.usersActive = [];
+    this.restart();
+    this.loadBannedUsers();
   }
-
+  async loadBannedUsers() {
+    try {
+      const file = await fs.readFile('./bannedUsers.json');
+      this.bannedUsers = JSON.parse(file.toString());
+    } catch (e) {
+      this.bannedUsers = [];
+    }
+  }
   async connect(): Promise<void> {
     const { state, saveCreds } = await useMultiFileAuthState(this.authFolder);
     this.saveCredentials = saveCreds;
@@ -105,15 +114,13 @@ export class WaService {
   private haveToHandle({ key, message }) {
     let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
 
+    if (this.isBanned(key)) return false;
+
     if (mentions) {
       mentions = mentions.map((mention) => mention.split('@')[0]);
     }
 
     const itsMe = mentions?.find((m) => m === this.getBotId());
-    /**
-     * Just answer if it's tagged
-     */
-
     if (
       !itsMe ||
       !message ||
@@ -122,6 +129,7 @@ export class WaService {
       return false;
     }
     const isOnGoingResponse = this.userHasOnGoingResponse(key.participant);
+
     if (isOnGoingResponse) {
       console.log(
         `User ${key.participant} has ongoing response. Ignoring message`,
@@ -134,7 +142,9 @@ export class WaService {
     );
     return true;
   }
-
+  private isBanned(key) {
+    return this.bannedUsers.includes(key.participant);
+  }
   private userHasOnGoingResponse(userKey: string) {
     if (this.usersActive?.includes(userKey)) {
       return true;
@@ -171,7 +181,14 @@ export class WaService {
       return '';
     }
   }
-
+  async banUser({ message, key }) {
+    try {
+      this.bannedUsers.push(key.participant);
+      fs.writeFile('./bannedUsers.json', JSON.stringify(this.bannedUsers));
+    } catch (error) {
+      console.log('Error banning user: ', key);
+    }
+  }
   private async sendMessage(
     jid: string,
     content: any,
