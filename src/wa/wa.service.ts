@@ -191,8 +191,9 @@ export class WaService {
   }
   async banUser({ message, key }) {
     try {
-      this.bannedUsers.push(key.participant);
+      this.bannedUsers.push(key.participant ?? key.remoteJid);
       fs.writeFile('./bannedUsers.json', JSON.stringify(this.bannedUsers));
+      console.log(`User  ${key} has been banned. Message: ${message}`);
     } catch (error) {
       console.log('Error banning user: ', key);
     }
@@ -204,7 +205,6 @@ export class WaService {
   ): Promise<void> {
     try {
       if (!this.selfReply) content.text = (content.text || '') + this.emptyChar;
-
       const sent = await this.socket.sendMessage(jid, content, ...args);
       this.messageStore[sent.key.id!] = sent;
     } catch (err) {
