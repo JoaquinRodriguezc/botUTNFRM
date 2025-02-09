@@ -98,7 +98,9 @@ If the user provides an incomplete department name, automatically complete it:
 
 ### 📌 3. Standardizing Class Sections  
 Convert class section names to uppercase:  
-Example: **"2x44"** → **"2X44"**  
+Example: **"2x44"** → **"2X44"**
+Add element to course coude: 
+Example: **"2k1"** → **"2K01"**
 
 ### 📌 4. Handling Undefined or Empty Tool Responses  
 If you receive **undefined** or an empty array ( *[]* ) as a response from a tool, respond with:  
