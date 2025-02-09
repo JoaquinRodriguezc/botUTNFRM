@@ -8,7 +8,8 @@ export class SourceOfficeHours {
     return this.linksStrategy.getOfficeHours();
   }
   async getOfficeByDepartment(deparment: string) {
-    return this.linksStrategy.getOfficeHoursByDeparment(deparment);
+    const officehours = this.linksStrategy.getOfficeHoursByDeparment(deparment);
+    return officehours;
   }
   async getOfficeHoursBySubject() {}
 }
