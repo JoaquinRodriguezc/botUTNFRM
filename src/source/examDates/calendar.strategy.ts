@@ -1,10 +1,10 @@
-import { calendar_v3 } from 'googleapis';
-import { GoogleCalendarService } from './calendar.client';
 import { Injectable } from '@nestjs/common';
-import { FinalExam } from '../source.types';
-import * as departments from './departments.json';
 import { Cron, CronExpression } from '@nestjs/schedule';
+import { calendar_v3 } from 'googleapis';
 import * as fs from 'node:fs/promises';
+import { FinalExam } from '../source.types';
+import { GoogleCalendarService } from './calendar.client';
+import * as departments from './departments.json';
 @Injectable()
 export class CalendarStrategy {
   constructor(private calendarService: GoogleCalendarService) {

@@ -56,6 +56,7 @@ export class IaService {
           ).getOfficeByDepartmentTool,
         },
         toolChoice: 'required',
+        temperature: 0,
       });
       if (result.response && result.response.messages) {
         messages.push(...result.response.messages);
@@ -67,6 +68,7 @@ export class IaService {
       const finalResult = await generateText({
         model: openai('gpt-4o'),
         messages,
+        temperature: 0,
       });
       console.log('\x1b[32m✅ Response generated successfully\x1b[0m');
       messages.push(...finalResult.response.messages);
