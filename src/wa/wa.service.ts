@@ -49,7 +49,6 @@ export class WaService {
     this.socket = makeWASocket({
       printQRInTerminal: true,
       auth: state,
-      getMessage: this.getMessageFromStore as any,
     });
 
     this.plugins.forEach((plugin) =>
@@ -97,13 +96,11 @@ export class WaService {
         const { messages } = events['messages.upsert'];
 
         // if (this.logMessages) console.log('msg upsert', messages);
-
-        messages.forEach(async (msg: Message) => {
-          const { key, message } = msg;
-          const handle = this.shouldHandle({ key, message });
-          if (!handle) return;
-          this.plugins.forEach((plugin) => plugin.process(key, message));
-        });
+        const msg = messages.pop();
+        const { key, message } = msg;
+        const handle = this.shouldHandle({ key, message });
+        if (!handle) return;
+        this.plugins.forEach((plugin) => plugin.process(key, message));
       }
     });
   }
@@ -112,6 +109,10 @@ export class WaService {
   }
 
   private shouldHandle({ key, message }) {
+    const maxDelay = new Date().valueOf() - 10 * 1000;
+    if (message.timestamp > maxDelay) {
+      return false;
+    }
     const text = this.getText(key, message);
     console.log(text, text.length);
     if (
