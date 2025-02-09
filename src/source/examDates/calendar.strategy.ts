@@ -7,7 +7,9 @@ import { Cron, CronExpression } from '@nestjs/schedule';
 import * as fs from 'node:fs/promises';
 @Injectable()
 export class CalendarStrategy {
-  constructor(private calendarService: GoogleCalendarService) {}
+  constructor(private calendarService: GoogleCalendarService) {
+    this.fetchAndSaveDate();
+  }
 
   public async getSubjectExamDates(subject: string) {
     const dates = await this.getExamDates();
@@ -16,7 +18,7 @@ export class CalendarStrategy {
     );
     return subjectDate;
   }
-  @Cron(CronExpression.EVERY_HOUR)
+  @Cron(CronExpression.EVERY_30_MINUTES)
   public async fetchAndSaveDate(): Promise<void> {
     const events = await this.calendarService.getEvents();
     const mapa = this.parseEventString(events);
@@ -25,6 +27,7 @@ export class CalendarStrategy {
         'src/source/examDates/finalExamdDates.json',
         JSON.stringify(mapa),
       );
+      console.log('Exam dates saved');
     } catch (error) {
       console.log('Error saving final exam dates', error);
     }

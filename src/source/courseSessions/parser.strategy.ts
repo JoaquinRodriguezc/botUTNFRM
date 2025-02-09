@@ -12,7 +12,9 @@ import * as fs from 'node:fs/promises';
 import { Cron, CronExpression } from '@nestjs/schedule';
 @Injectable()
 export class ParserStrategy {
-  constructor(private configService: ConfigService) {}
+  constructor(private configService: ConfigService) {
+    this.fetchAndSaveCourseSessions();
+  }
 
   @Cron(CronExpression.EVERY_DAY_AT_10AM)
   async fetchAndSaveCourseSessions(): Promise<void> {

@@ -31,7 +31,6 @@ export class GoogleCalendarService {
     const res = await this.calendar.events.list({
       calendarId: this.configService.getOrThrow<string>('GOOGLE_CALENDAR_ID'),
       timeMin: new Date().toISOString(),
-      maxResults: 20,
       singleEvents: true,
       orderBy: 'startTime',
     });
