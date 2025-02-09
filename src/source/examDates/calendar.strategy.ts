@@ -7,7 +7,9 @@ import { Cron, CronExpression } from '@nestjs/schedule';
 import * as fs from 'node:fs/promises';
 @Injectable()
 export class CalendarStrategy {
-  constructor(private calendarService: GoogleCalendarService) {}
+  constructor(private calendarService: GoogleCalendarService) {
+    this.fetchAndSaveDate();
+  }
 
   public async getSubjectExamDates(subject: string) {
     const dates = await this.getExamDates();
