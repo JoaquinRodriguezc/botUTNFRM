@@ -1,0 +1,162 @@
+{
+    "BASICAS": [
+      {
+        "subject": "Análisis Matemático I",
+        "abbreviation": ["ami", "am1", "am-i", "am i"]
+      },
+      {
+        "subject": "Análisis Matemático II",
+        "abbreviation": ["amii", "am2", "am-ii", "am ii"]	
+      },
+      {
+        "subject": "Quimica",
+        "abbreviation": ["q", "quim"]
+      },
+      {
+        "subject": "Quimica General",
+        "abbreviation": ["qg", "quim general"]
+      },
+      {
+        "subject": "Economia",
+        "abbreviation": ["eco"]
+      },
+      {
+        "subject": "Ingeniería y Sociedad",
+        "abbreviation": ["iys", "ing y soc"]
+      },
+      {
+        "subject": "Inglés I",
+        "abbreviation": ["i1", "ing 1"]
+      },
+      {
+        "subject": "Inglés II",
+        "abbreviation": ["i2", "ing 2"]
+      },
+      {
+        "subject": "Comunicación Linguística",
+        "abbreviation": ["com ling"]
+      },
+      {
+        "subject": "Epistemología de la Ciencia",
+        "abbreviation": ["epistemologia"]
+      },
+      {
+        "subject": "Metodología de la Investigación",
+        "abbreviation": ["metodologia"]
+      },
+      {
+        "subject": "Legislación",
+        "abbreviation": ["legis"]
+      },
+      {
+        "subject": "FORMACIÓN DE EMPRENDEDORES - INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN GERENCIAL",
+        "abbreviation": ["emprendedores", "form emprend"]
+      },
+      {
+        "subject": "Física I",
+        "abbreviation": ["f1", "fis1"]
+      },
+      {
+        "subject": "Física I",
+        "abbreviation": ["f2", "fis2"]
+      }
+    ],
+    "SISTEMAS": [
+        {
+          "subject": "Algoritmos y Estructuras de Datos",
+          "abbreviation": ["algos", "ayed"]
+        },
+        {
+          "subject": "Arquitectura de Computadoras",
+          "abbreviation": ["arq", "arq de comp"]	
+        },
+        {
+          "subject": "Sistemas y Organizaciones",
+          "abbreviation": ["syo"]
+        },
+        {
+          "subject": "Sistemas y Procesos de Negocio",
+          "abbreviation": ["spn"]
+        },
+        {
+          "subject": "Sintaxis y Semántica de los Lenguajes",
+          "abbreviation": ["sysl"]
+        },
+        {
+          "subject": "Análisis de Sistemas",
+          "abbreviation": ["ads"]
+        },
+        {
+          "subject": "Análisis de Sistemas de Información",
+          "abbreviation": ["ads"]
+        },
+        {
+          "subject": "Paradigmas de Programación",
+          "abbreviation": ["pp", "pdp"]
+        },
+        {
+          "subject": "Sistemas Operativos",
+          "abbreviation": ["so", "sis op", "sis ops", "sist op", "sists ops"]
+        },
+        {
+          "subject": "Base de Datos",
+          "abbreviation": ["bd"]
+        },
+        {
+          "subject": "Comunicación de Datos",
+          "abbreviation": ["com datos"]
+        },
+        {
+          "subject": "Administración de Proyectos",
+          "abbreviation": ["adm proyecto", "adm proyectos"]
+        },
+        {
+          "subject": "Análisis Numérico",
+          "abbreviation": ["an num", "anum"]
+        },
+        {
+          "subject": "Computación Paralela",
+          "abbreviation": ["comp paralela", "com paralela"]
+        },
+        {
+          "subject": "Desarrollo de Software",
+          "abbreviation": ["des soft", "des softw"]
+        },
+        {
+            "subject": "Diseño de Sistemas",
+            "abbreviation": ["dis"]
+          },
+          {
+            "subject": "Diseño de Sistemas de Información",
+            "abbreviation": ["dis"]
+          },
+          {
+            "subject": "Matemática Superior",
+            "abbreviation": ["mat sup"]
+          },
+          {
+            "subject": "Administración de Recursos",
+            "abbreviation": ["adm recursos"]
+          },
+          {
+            "subject": "Administración de Sistemas de Información",
+            "abbreviation": ["adm sistemas"]
+          },
+          {
+            "subject": "Simulación",
+            "abbreviation": ["sim"]
+          },
+          {
+            "subject": "Investigación de Datos",
+            "abbreviation": ["inv datos"]
+          },
+          {
+            "subject": "Arquitectura de Microservicios",
+            "abbreviation": ["arq microservicios", "arq micro", "arq microserv"]
+          },
+          {
+            "subject": "Bases de Datos Avanzada",
+            "abbreviation": ["bd avanzada"]
+          }
+      ]
+  }
