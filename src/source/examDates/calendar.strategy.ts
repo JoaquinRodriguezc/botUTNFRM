@@ -16,6 +16,9 @@ export class CalendarStrategy {
     const subjectDate = dates.find(
       (s) => s.subjectName.toLowerCase() === subject.toLowerCase(),
     );
+    if (!subjectDate) {
+      return [];
+    }
     return subjectDate;
   }
   @Cron(CronExpression.EVERY_30_MINUTES)
