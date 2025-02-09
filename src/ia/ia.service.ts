@@ -54,6 +54,11 @@ export class IaService {
             this.srcScheduleService,
             this.srcOfficeHours,
           ).getOfficeByDepartmentTool,
+          getCourseSessionsByCourseCodeTool: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+            this.srcOfficeHours,
+          ).getCourseSessionsByCourseCodeTool,
         },
         toolChoice: 'required',
         temperature: 0,

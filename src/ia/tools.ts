@@ -1,9 +1,9 @@
-import { tool } from 'ai';
-import { z } from 'zod';
-import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
-import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { Injectable } from '@nestjs/common';
+import { tool } from 'ai';
+import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
+import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
+import { z } from 'zod';
 
 @Injectable()
 export class Tools {
@@ -64,6 +64,20 @@ export class Tools {
     execute: async ({ department }) => ({
       department,
       officeHours: await this.srcOfficeHours.getOfficeByDepartment(department),
+    }),
+  });
+
+  getCourseSessionsByCourseCodeTool = tool({
+    description: 'Get course sessions by specific course code',
+    parameters: z.object({
+      courseCode: z
+        .string()
+        .describe('Course code to find corresponding sessions'),
+    }),
+    execute: async ({ courseCode }) => ({
+      courseCode,
+      dates:
+        await this.srcScheduleService.getCourseSessionsByCourseCode(courseCode),
     }),
   });
 }
