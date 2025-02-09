@@ -25,7 +25,7 @@ export class IAWhatsappPluginService {
 
   async process(key, message) {
     const text = this.getText(key, message);
-
+    if (text.length < 25) return;
     try {
       const grp = await this.socket.groupMetadata(key.remoteJid);
       const members = grp.participants;

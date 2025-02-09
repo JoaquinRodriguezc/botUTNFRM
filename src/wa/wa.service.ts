@@ -116,7 +116,6 @@ export class WaService {
     const text = this.getText(key, message);
     console.log(text, text.length);
     if (
-      text.length < 25 ||
       text.length > 90 ||
       this.isBanned(key) ||
       getContentType(message) !== 'extendedTextMessage'
