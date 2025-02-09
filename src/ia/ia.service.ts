@@ -1,11 +1,12 @@
+import { openai } from '@ai-sdk/openai';
 import { Injectable } from '@nestjs/common';
 import { CoreMessage, generateText } from 'ai';
-import { openai } from '@ai-sdk/openai';
-import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
+import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
-import { Tools } from './tools';
 import { SystemPromptService } from './systemprompt';
+import { Tools } from './tools';
+
 @Injectable()
 export class IaService {
   constructor(
@@ -54,7 +55,7 @@ export class IaService {
             this.srcOfficeHours,
           ).getOfficeByDepartmentTool,
         },
-        toolChoice: 'auto',
+        toolChoice: 'required',
       });
       if (result.response && result.response.messages) {
         messages.push(...result.response.messages);
