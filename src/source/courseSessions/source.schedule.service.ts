@@ -24,4 +24,8 @@ export class SourceScheduleService {
     console.log(sessionsbyCommission);
     return sessionsbyCommission;
   }
+  async getCourseSessionsByCourseCode(courseCode: string) {
+    const courseSession = await this.parserStrategy.getCourseSessions();
+    return courseSession.filter((c) => c.subject.courseCode === courseCode);
+  }
 }
