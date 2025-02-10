@@ -7,7 +7,6 @@ import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.ser
 import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
-import { WaService } from 'src/wa/wa.service';
 
 @Injectable()
 export class IaService {
