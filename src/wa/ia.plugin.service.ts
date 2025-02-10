@@ -25,26 +25,17 @@ export class IAWhatsappPluginService {
 
   async process(key, message) {
     const text = this.getText(key, message);
-    if (text.length < 25) return;
     try {
-      const grp = await this.socket.groupMetadata(key.remoteJid);
-      const members = grp.participants;
       const response = await this.iaService.processChatStream(text);
-      const mentions = [];
-      const items = [];
 
-      members.forEach(({ id, admin }) => {
-        mentions.push(id);
-        items.push('!' + id.slice(0, 13) + (admin ? '(admin)' : ''));
-      });
-      if (members.length < this.membersLimit)
-        this.sendMessage(
-          key.remoteJid,
-          { text: response },
-          { quoted: { key, message } },
-        );
-      this.setUsersNotActive(key.participant);
+      this.sendMessage(
+        key.remoteJid,
+        { text: response },
+        { quoted: { key, message } },
+      );
+      this.setUsersNotActive(key.participant ?? key.remoteJid);
     } catch (err) {
+      this.setUsersNotActive(key.participant ?? key.remoteJid);
       console.log('Error processing messages:', err);
     }
   }

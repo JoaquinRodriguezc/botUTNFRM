@@ -100,6 +100,7 @@ export class WaService {
         const { key, message } = msg;
         const handle = this.shouldHandle({ key, message });
         if (!handle) return;
+        console.log(`Handling message for ${key}: ${message}`);
         this.plugins.forEach((plugin) => plugin.process(key, message));
       }
     });
@@ -109,58 +110,66 @@ export class WaService {
   }
 
   private shouldHandle({ key, message }) {
+    /**
+     * if message is 10 seconds old bot will ignore msg
+     */
     const maxDelay = new Date().valueOf() - 10 * 1000;
     if (message.timestamp > maxDelay) {
       return false;
     }
     const text = this.getText(key, message);
     console.log(text, text.length);
+    console.log(message);
     if (
+      !message ||
+      this.getText(key, message).includes(this.emptyChar) ||
       text.length > 90 ||
       this.isBanned(key) ||
-      getContentType(message) !== 'extendedTextMessage'
+      (getContentType(message) !== 'conversation' &&
+        getContentType(message) !== 'extendedTextMessage')
     ) {
       return false;
     }
-    let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
-
-    if (mentions) {
-      mentions = mentions.map((mention) => mention.split('@')[0]);
-    }
-
-    const itsMe = mentions?.find((m) => m === this.getBotId());
-    if (
-      !itsMe ||
-      !message ||
-      this.getText(key, message).includes(this.emptyChar)
-    ) {
-      return false;
-    }
-    const isOnGoingResponse = this.userHasOnGoingResponse(key.participant);
+    console.log('A');
+    const isOnGoingResponse = this.userHasOnGoingResponse(
+      key.participant ?? key.remoteJid,
+    );
 
     if (isOnGoingResponse) {
       console.log(
-        `User ${key.participant} has ongoing response. Ignoring message`,
+        `User ${key.participant ?? key.remoteJid} has ongoing response. Ignoring message`,
       );
       return false;
     }
+    const isGroupMessage = key.remoteJid.endsWith('@g.us');
 
-    console.log(
-      `Handling message for ${key.participant} with name ${key.pushName}`,
-    );
+    if (isGroupMessage) {
+      console.log('It is a group message');
+      let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
+
+      if (mentions) {
+        mentions = mentions.map((mention) => mention.split('@')[0]);
+      }
+
+      const itsMe = mentions?.find((m) => m === this.getBotId());
+      if (!itsMe) return;
+    }
+    this.setUserActive(key.participant ?? key.remoteJid);
     return true;
+  }
+  private setUserActive(userKey: string) {
+    this.usersActive.push(userKey);
   }
   private isBanned(key) {
     return this.bannedUsers.includes(key.participant);
   }
   private userHasOnGoingResponse(userKey: string) {
+    console.log(userKey);
     if (this.usersActive?.includes(userKey)) {
       return true;
     }
-    this.usersActive.push(userKey);
     return false;
   }
-
   private async restart(): Promise<void> {
     await this.connect();
     await this.run();
