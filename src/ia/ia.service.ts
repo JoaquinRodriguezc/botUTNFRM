@@ -6,7 +6,6 @@ import { SourceExamDateService } from 'src/source/examDates/source.examDates.ser
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
-import { WaService } from 'src/wa/wa.service';
 
 @Injectable()
 export class IaService {
