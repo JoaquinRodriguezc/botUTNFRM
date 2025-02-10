@@ -1,5 +1,5 @@
 /**
- * TO DO: IMPROVE THIS SERVICE AND MODULE
+ * TO DO: IMPROVE THIS SERVICE AND MODULE@
  */
 import makeWASocket, {
   DisconnectReason,
@@ -124,13 +124,8 @@ export class WaService {
     /**
      * if message is 10 seconds old bot will ignore msg
      */
-    const maxDelay = new Date().valueOf() - 10 * 1000;
-    if (message.timestamp > maxDelay) {
-      return false;
-    }
+
     const text = this.getText(key, message);
-    console.log(text, text.length);
-    console.log(message);
     if (
       !message ||
       this.getText(key, message).includes(this.emptyChar) ||
@@ -141,6 +136,12 @@ export class WaService {
     ) {
       return false;
     }
+
+    const maxDelay = new Date().valueOf() - 10 * 1000;
+    if (message?.timestamp > maxDelay) {
+      return false;
+    }
+
     const isOnGoingResponse = this.userHasOnGoingResponse(
       key.participant ?? key.remoteJid,
     );
