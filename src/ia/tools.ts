@@ -3,6 +3,7 @@ import { tool } from 'ai';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
+import { WaService } from 'src/wa/wa.service';
 import { z } from 'zod';
 
 @Injectable()
@@ -11,6 +12,7 @@ export class Tools {
     private srcExamDatesService: SourceExamDateService,
     private srcScheduleService: SourceScheduleService,
     private srcOfficeHours: SourceOfficeHours,
+    private waService: WaService,
   ) {}
 
   getExamDatesTool = tool({
@@ -79,5 +81,25 @@ export class Tools {
       dates:
         await this.srcScheduleService.getCourseSessionsByCourseCode(courseCode),
     }),
+  });
+
+  banUserTool = tool({
+    description: 'Ban a user by their participant ID',
+    parameters: z.object({
+      key: z.object({
+        participant: z
+          .string()
+          .describe('User ID in format 123456789@s.whatsapp.net'),
+      }),
+      message: z.string().optional().describe('Optional ban reason message'),
+    }),
+    execute: async ({ key, message }) => {
+      await this.waService.banUser({ message, key });
+      return {
+        bannedUser: key.participant,
+        success: true,
+        message: message || 'No reason provided',
+      };
+    },
   });
 }
