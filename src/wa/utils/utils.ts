@@ -10,11 +10,10 @@ export async function isParticipantAdmin(sock, key) {
     console.log(participant);
     if (
       participant &&
-      (participant.admin === 'admin' || participant.admin === 'superadmin')
+      (participant.admin === 'admin' || participant.superadmin === 'superadmin')
     ) {
       return true;
     }
-    console.log('Participant does not have rights to execute this command');
     return false;
   } catch (error) {
     console.error('Error fetching group metadata:', error);
@@ -23,7 +22,7 @@ export async function isParticipantAdmin(sock, key) {
 }
 export async function isGroupMessage(key) {
   /**
-   * when remotteJid ends with "@g.us" message is from a group
+   * when remoteJid ends with "@g.us" message is from a group
    */
   return key.remoteJid?.endsWith('@g.us');
 }

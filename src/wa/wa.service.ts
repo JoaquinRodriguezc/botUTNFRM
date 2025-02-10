@@ -1,3 +1,6 @@
+/**
+ * TO DO: IMPROVE THIS SERVICE AND MODULE
+ */
 import makeWASocket, {
   DisconnectReason,
   useMultiFileAuthState,
@@ -23,11 +26,11 @@ export class WaService {
   private bannedUsers: string[];
   private usersActive: string[];
   constructor(
-    @Inject() private tagEveryone: TagEveryoneService,
+    @Inject() private tagEveryoneService: TagEveryoneService,
     private wspIaService: IAWhatsappPluginService,
     private configService: ConfigService,
   ) {
-    this.plugins = [tagEveryone, wspIaService];
+    this.plugins = [tagEveryoneService, wspIaService];
     this.authFolder = 'auth';
     this.selfReply = false;
     this.logMessages = true;
@@ -102,7 +105,14 @@ export class WaService {
         const handle = this.shouldHandle({ key, message });
         if (!handle) return;
         console.log(`Handling message for ${key}: ${message}`);
-        this.plugins.forEach((plugin) => plugin.process(key, message));
+
+        const text = this.getText(key, message);
+
+        if (text.includes('@all')) {
+          this.tagEveryoneService.process(key, message);
+          return;
+        }
+        this.wspIaService.process(key, message);
       }
     });
   }

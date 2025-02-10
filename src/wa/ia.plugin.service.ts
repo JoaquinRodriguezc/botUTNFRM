@@ -23,7 +23,6 @@ export class IAWhatsappPluginService {
     const text = this.getText(key, message);
     try {
       const response = await this.iaService.processChatStream(text);
-
       this.sendMessage(
         key.remoteJid,
         { text: response },

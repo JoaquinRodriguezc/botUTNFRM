@@ -10,7 +10,7 @@ export class TagEveryoneService {
   private trigger;
   private setUsersNotActive;
   constructor() {
-    this.membersLimit = 100;
+    this.membersLimit = 1024;
     this.trigger = 'all';
   }
 
@@ -26,18 +26,25 @@ export class TagEveryoneService {
 
     if (!text.toLowerCase().includes('@' + this.trigger)) return;
 
-    if (!isGroupMessage(key) || isParticipantAdmin(this.socket, key)) return;
+    if (!isGroupMessage(key)) return;
+    const isAdmin = await isParticipantAdmin(this.socket, key);
+    console.log(isAdmin);
+    if (!isAdmin) {
+      console.log();
+      console.log('Participant does not have rights to execute this command');
+      console.log('user is not admin');
+      this.setUsersNotActive(key.participant);
+      return;
+    }
 
     try {
       const grp = await this.socket.groupMetadata(key.remoteJid);
       const members = grp.participants;
 
       const mentions = [];
-      const items = [];
 
       members.forEach(({ id, admin }) => {
         mentions.push(id);
-        items.push('@' + id.slice(0, 13) + (admin ? '(admin)' : ''));
       });
 
       if (members.length < this.membersLimit)
