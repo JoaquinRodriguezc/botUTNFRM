@@ -4,6 +4,7 @@ import { CoreMessage, generateText } from 'ai';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
+import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
 import { WaService } from 'src/wa/wa.service';
@@ -40,22 +41,32 @@ export class IaService {
             this.srcExamDatesService,
             this.srcScheduleService,
             this.srcOfficeHours,
+            this.waService,
           ).getExamDatesTool,
           getCourseSessions: new Tools(
             this.srcExamDatesService,
             this.srcScheduleService,
             this.srcOfficeHours,
+            this.waService,
           ).getCourseSessionsTool,
           getCourseSessionsByComission: new Tools(
             this.srcExamDatesService,
             this.srcScheduleService,
             this.srcOfficeHours,
+            this.waService,
           ).getCourseSessionsByComissionTool,
           getOfficeByDepartmentTool: new Tools(
             this.srcExamDatesService,
             this.srcScheduleService,
             this.srcOfficeHours,
+            this.waService,
           ).getOfficeByDepartmentTool,
+          getCourseSessionsByCourseCodeTool: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+            this.srcOfficeHours,
+            this.waService,
+          ).getCourseSessionsByCourseCodeTool,
         },
         toolChoice: 'required',
         temperature: 0,

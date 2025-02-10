@@ -1,73 +1,88 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Bot en desarrollo de la UTN Facultad Regional Mendoza
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Bot desarrollado por y para estudiantes de la facultad, facilitando horarios de cursado por comisión, por materia, mesas de una materia, respondiendo en lenguaje natural gracias a la integración con IA.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Tecnologías Utilizadas
 
-## Installation
+- **TypeScript** → Código tipado para mayor seguridad y mantenimiento.
+- **Node.js** → Backend ligero y escalable.
+- **NestJS** → Framework modular para la API.
+- **OpenAI** → Integración con IA para responder dudas académicas.
+- **SQLite / MySQL / PostgreSQL / Firebase** → Proximamente, base de datos para almacenar horarios.
 
-```bash
-$ pnpm install
-```
 
-## Running the app
+---
 
-```bash
-# development
-$ pnpm run start
+## Requisitos Previos
 
-# watch mode
-$ pnpm run start:dev
+- Node.js ≥ 14
+- npm o pnpm instalados a nivel global
 
-# production mode
-$ pnpm run start:prod
-```
+---
 
-## Test
+## Instalación y Configuración
 
-```bash
-# unit tests
-$ pnpm run test
+1. **Clonar el repositorio**:
 
-# e2e tests
-$ pnpm run test:e2e
+   ```bash
+   git clone https://github.com/tu_usuario/whatsapp-bot.git
+   cd whatsapp-bot
+   ```
 
-# test coverage
-$ pnpm run test:cov
-```
+2. **Instalar dependencias**:
 
-## Support
+   - Con **npm**:
+     ```bash
+     npm install
+     ```
+   - Con **pnpm**:
+     ```bash
+     pnpm install
+     ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+3. **Configurar variables de entorno**:
 
-## Stay in touch
+   Crear un archivo `.env` en la raíz del proyecto.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+4. **Ejecutar el bot**:
 
-## License
+   - Con **npm**:
+     ```bash
+     npm run start
+     ```
+   - Con **pnpm**:
+     ```bash
+     pnpm run start
+     ```
 
-Nest is [MIT licensed](LICENSE).
+---
+
+
+## Futuras Mejoras
+
+- **Mejora de respuestas con OpenAI** para un mayor soporte académico.
+
+---
+
+## Cómo Contribuir
+
+1. Hacer un **fork** del repositorio.
+2. Crear una nueva rama:
+   ```bash
+   git checkout -b mi-feature
+   ```
+3. Realizar los cambios y hacer commit:
+   ```bash
+   git commit -m "Descripción de la mejora"
+   ```
+4. Subir la rama:
+   ```bash
+   git push origin mi-feature
+   ```
+5. Crear un **Pull Request** en GitHub.
+
+---
+Last edited 09/02/2025

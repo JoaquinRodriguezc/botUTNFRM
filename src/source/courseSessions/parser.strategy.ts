@@ -1,4 +1,8 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { Cron, CronExpression } from '@nestjs/schedule';
+import * as fs from 'node:fs/promises';
+import { isEqual, normalize } from 'src/utils/utils';
 import { StringDecoder } from 'string_decoder';
 import {
   CourseSession,
@@ -6,10 +10,6 @@ import {
   ScheduleEntry,
   Subject,
 } from '../source.types';
-import { isEqual, normalize } from 'src/utils/utils';
-import { ConfigService } from '@nestjs/config';
-import * as fs from 'node:fs/promises';
-import { Cron, CronExpression } from '@nestjs/schedule';
 @Injectable()
 export class ParserStrategy {
   constructor(private configService: ConfigService) {

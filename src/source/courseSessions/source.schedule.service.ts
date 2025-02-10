@@ -21,11 +21,11 @@ export class SourceScheduleService {
         subjectName,
         commission,
       );
-    console.log(sessionsbyCommission);
     return sessionsbyCommission;
   }
   async getCourseSessionsByCourseCode(courseCode: string) {
     const courseSession = await this.parserStrategy.getCourseSessions();
+    console.log(courseSession);
     return courseSession.filter((c) => c.subject.courseCode === courseCode);
   }
 }
