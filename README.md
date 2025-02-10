@@ -10,10 +10,8 @@ Bot desarrollado por y para estudiantes de la facultad, facilitando horarios de 
 - **TypeScript** → Código tipado para mayor seguridad y mantenimiento.
 - **Node.js** → Backend ligero y escalable.
 - **NestJS** → Framework modular para la API.
-- **Next.js** → Interfaz web opcional para administración.
 - **OpenAI** → Integración con IA para responder dudas académicas.
-- **Baileys** → Comunicación con WhatsApp.
-- **SQLite / MySQL / PostgreSQL / Firebase** → Base de datos para almacenar horarios.
+- **SQLite / MySQL / PostgreSQL / Firebase** → Proximamente, base de datos para almacenar horarios.
 
 
 ---
@@ -47,13 +45,7 @@ Bot desarrollado por y para estudiantes de la facultad, facilitando horarios de 
 
 3. **Configurar variables de entorno**:
 
-   Crear un archivo `.env` en la raíz del proyecto con el siguiente contenido:
-
-   ```bash
-   WHATSAPP_SESSION=tu_sesion
-   DATABASE_URL=sqlite://horarios.db # O la conexión a MySQL/PostgreSQL
-   OPENAI_API_KEY=tu_api_key
-   ```
+   Crear un archivo `.env` en la raíz del proyecto.
 
 4. **Ejecutar el bot**:
 
@@ -93,3 +85,4 @@ Bot desarrollado por y para estudiantes de la facultad, facilitando horarios de 
 5. Crear un **Pull Request** en GitHub.
 
 ---
+Last edited 09/02/2025
