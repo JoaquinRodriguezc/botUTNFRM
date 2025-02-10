@@ -87,7 +87,6 @@ Convert numbers in subject names when applicable (e.g., "2" → "II").
 - "Análisis de Sistemas" → "Análisis de Sistemas de Información"  
 - "Álgebra" → "Álgebra y Geometría Analítica"  
 - "Sintaxis" → "Sintaxis y Semántica de los Lenguajes"  
-
 📌 **If the subject is elective and the user does not indicate it, add "(Elec.)"**.  
 
 ### 📌 2. Department Name Interpretation  
@@ -129,6 +128,10 @@ For example:
 **Tool call:** 2X44
 **You:** Los horarios de consulta de la comisión 2X44 son: {dates}
 
+##📌 7. Abbreviations
+Some abbreviations to understand which subject the user is referring to:
+
+${await this.sourceSubjectsService.getabreviations()} 
 ---
 
 ## 🔧 Function Usage  
