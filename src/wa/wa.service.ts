@@ -5,11 +5,12 @@ import makeWASocket, {
   proto,
   getContentType,
 } from '@whiskeysockets/baileys';
-import { TagEveryone } from './wa.plugin.service';
+import { TagEveryoneService } from './everyone.plugin.service';
 import { Inject } from '@nestjs/common';
 import { IAWhatsappPluginService } from './ia.plugin.service';
 import { ConfigService } from '@nestjs/config';
 import * as fs from 'node:fs/promises';
+import { isGroupMessage } from './utils/utils';
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -22,7 +23,7 @@ export class WaService {
   private bannedUsers: string[];
   private usersActive: string[];
   constructor(
-    @Inject() private tagEveryone: TagEveryone,
+    @Inject() private tagEveryone: TagEveryoneService,
     private wspIaService: IAWhatsappPluginService,
     private configService: ConfigService,
   ) {
@@ -130,7 +131,6 @@ export class WaService {
     ) {
       return false;
     }
-    console.log('A');
     const isOnGoingResponse = this.userHasOnGoingResponse(
       key.participant ?? key.remoteJid,
     );
@@ -141,10 +141,8 @@ export class WaService {
       );
       return false;
     }
-    const isGroupMessage = key.remoteJid.endsWith('@g.us');
-
-    if (isGroupMessage) {
-      console.log('It is a group message');
+    const isAGroupMessage = isGroupMessage(key);
+    if (isAGroupMessage) {
       let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
 
       if (mentions) {

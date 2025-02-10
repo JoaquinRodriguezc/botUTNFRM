@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
+import { isGroupMessage, isParticipantAdmin } from './utils/utils';
 
 @Injectable()
-export class TagEveryone {
+export class TagEveryoneService {
   private socket;
   private getText;
   private sendMessage;
@@ -24,6 +25,8 @@ export class TagEveryone {
     const text = this.getText(key, message);
 
     if (!text.toLowerCase().includes('@' + this.trigger)) return;
+
+    if (!isGroupMessage(key) || isParticipantAdmin(this.socket, key)) return;
 
     try {
       const grp = await this.socket.groupMetadata(key.remoteJid);

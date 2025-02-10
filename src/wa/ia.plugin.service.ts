@@ -7,14 +7,10 @@ export class IAWhatsappPluginService {
   private socket;
   private getText;
   private sendMessage;
-  private membersLimit;
   private setUsersNotActive;
   constructor(
     @Inject(forwardRef(() => IaService)) private iaService: IaService,
-    private configService: ConfigService,
-  ) {
-    this.membersLimit = 100;
-  }
+  ) {}
 
   public init(socket, getText, sendMessage, setUsersNotActive) {
     this.socket = socket;
