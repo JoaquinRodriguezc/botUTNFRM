@@ -1,10 +1,9 @@
 import { openai } from '@ai-sdk/openai';
-import { Injectable } from '@nestjs/common';
+import { forwardRef, Inject, Injectable } from '@nestjs/common';
 import { CoreMessage, generateText } from 'ai';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
-import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
 import { WaService } from 'src/wa/wa.service';
@@ -16,7 +15,7 @@ export class IaService {
     private srcScheduleService: SourceScheduleService,
     private srcOfficeHours: SourceOfficeHours,
     private system: SystemPromptService,
-    private waService: WaService,
+    @Inject(forwardRef(() => WaService)) private waService: WaService,
   ) {}
 
   async processChatStream(prompt: string) {

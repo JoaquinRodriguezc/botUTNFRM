@@ -9,6 +9,6 @@ import { IaModule } from '../ia/ia.module';
   imports: [forwardRef(() => IaModule)],
   providers: [TagEveryone, WaService, IAWhatsappPluginService],
   controllers: [WaController],
-  exports: [WaService],
+  exports: [WaService, IAWhatsappPluginService],
 })
 export class WaModule {}

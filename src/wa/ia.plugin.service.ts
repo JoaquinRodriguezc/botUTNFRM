@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { forwardRef, Inject, Injectable } from '@nestjs/common';
 import { IaService } from '../ia/ia.service';
 import { ConfigService } from '@nestjs/config';
 
@@ -10,7 +10,7 @@ export class IAWhatsappPluginService {
   private membersLimit;
   private setUsersNotActive;
   constructor(
-    private iaService: IaService,
+    @Inject(forwardRef(() => IaService)) private iaService: IaService,
     private configService: ConfigService,
   ) {
     this.membersLimit = 100;
