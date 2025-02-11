@@ -74,7 +74,6 @@ export class CalendarStrategy {
     return finalExamDates;
   }
   private getLines(description: string): string[] {
-    console.log(description);
     if (!description) return [];
     const d = description
       .replaceAll(/:|<\/p>|<b>.*?<\/b>|<p>|<b> <\/b>|<p dir="ltr">|<br>/g, ';')
@@ -92,7 +91,6 @@ export class CalendarStrategy {
       })
       .map((line) => line.trim())
       .filter((line) => line !== '');
-    console.log(d);
     return d;
   }
 }

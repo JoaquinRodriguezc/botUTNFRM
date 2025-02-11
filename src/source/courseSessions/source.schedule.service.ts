@@ -25,7 +25,14 @@ export class SourceScheduleService {
   }
   async getCourseSessionsByCourseCode(courseCode: string) {
     const courseSession = await this.parserStrategy.getCourseSessions();
-    console.log(courseSession);
     return courseSession.filter((c) => c.subject.courseCode === courseCode);
+  }
+  async getCourseSessionsByTerm(term: string, commission: string) {
+    const courseTerm = await this.parserStrategy.getCourseSessionsByTerm(
+      term,
+      commission,
+    );
+
+    return courseTerm;
   }
 }

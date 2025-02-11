@@ -83,6 +83,22 @@ export class Tools {
     }),
   });
 
+  getCourseSessionsByTermTool = tool({
+    description: 'Get course sessions for a specific term and commission',
+    parameters: z.object({
+      term: z.string().describe('Term to find course sessions'),
+      commission: z.string().describe('Commission number or identifier'),
+    }),
+    execute: async ({ term, commission }) => ({
+      term,
+      commission,
+      dates: await this.srcScheduleService.getCourseSessionsByTerm(
+        term,
+        commission,
+      ),
+    }),
+  });
+
   banUserTool = tool({
     description: 'Ban a user by their participant ID',
     parameters: z.object({

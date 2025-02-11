@@ -4,9 +4,9 @@ import { CoreMessage, generateText } from 'ai';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
+import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
-import { WaService } from 'src/wa/wa.service';
 
 @Injectable()
 export class IaService {
@@ -66,6 +66,12 @@ export class IaService {
             this.srcOfficeHours,
             this.waService,
           ).getCourseSessionsByCourseCodeTool,
+          getCourseSessionsByTerm: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+            this.srcOfficeHours,
+            this.waService,
+          ).getCourseSessionsByTermTool,
         },
         toolChoice: 'required',
         temperature: 0,

@@ -70,6 +70,16 @@ export class ParserStrategy {
         normalize(c.subject.courseCode) === normalize(commission),
     );
   }
+
+  async getCourseSessionsByTerm(term: string, commission: string) {
+    const courseTerm = await this.getCourseSessions();
+    return courseTerm.filter(
+      (c) =>
+        normalize(c.subject.term) === normalize(term) &&
+        normalize(c.subject.courseCode) === normalize(commission),
+    );
+  }
+
   private async getRawCourseSessions(area: string) {
     const formData = new URLSearchParams();
 
@@ -157,6 +167,7 @@ export class ParserStrategy {
         classroom: null,
       });
     });
+    console.log(courseSessions);
     return courseSessions;
   }
   private cleanRow(row: string) {
