@@ -19,8 +19,7 @@ export class IAWhatsappPluginService {
     this.setUsersNotActive = setUsersNotActive;
   }
 
-  async process(key, message) {
-    const text = this.getText(key, message);
+  async process(key, message, text: string) {
     try {
       const response = await this.iaService.processChatStream(text);
       this.sendMessage(

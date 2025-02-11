@@ -14,7 +14,7 @@ lerna-debug.log*
 /auth
 # OS
 .DS_Store
-
+bannedUsers.json
 /src/source/courseSessions/courseSessions.json
 /src/source/examDates/finalExamdDates.json
 # Tests

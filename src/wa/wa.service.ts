@@ -106,13 +106,17 @@ export class WaService {
         if (!handle) return;
         console.log(`Handling message for ${key}: ${message}`);
 
-        const text = this.getText(key, message);
+        let text = this.getText(key, message);
+
+        const botNumber = this.getBotId();
+
+        text = text.replace('@' + botNumber, '');
 
         if (text.includes('@all')) {
           this.tagEveryoneService.process(key, message);
           return;
         }
-        this.wspIaService.process(key, message);
+        this.wspIaService.process(key, message, text);
       }
     });
   }
@@ -126,13 +130,16 @@ export class WaService {
      */
 
     const text = this.getText(key, message);
+    const msgTyp =
+      getContentType(message) === 'conversation' ||
+      getContentType(message) === 'extendedTextMessage';
+    const contains = this.getText(key, message).includes(this.emptyChar);
     if (
       !message ||
-      this.getText(key, message).includes(this.emptyChar) ||
+      contains ||
       text.length > 90 ||
       this.isBanned(key) ||
-      (getContentType(message) !== 'conversation' &&
-        getContentType(message) !== 'extendedTextMessage')
+      !msgTyp
     ) {
       return false;
     }
@@ -201,7 +208,7 @@ export class WaService {
         const me = key.participant.slice(0, 12);
         text = text.replace(/\@me\b/g, `@${me}`);
       }
-
+      console.log(text);
       return text;
     } catch (err) {
       return '';
@@ -209,6 +216,7 @@ export class WaService {
   }
   async banUser({ message, key }) {
     try {
+      console.log(key);
       this.bannedUsers.push(key.participant ?? key.remoteJid);
       fs.writeFile('./bannedUsers.json', JSON.stringify(this.bannedUsers));
       console.log(`User  ${key} has been banned. Message: ${message}`);
