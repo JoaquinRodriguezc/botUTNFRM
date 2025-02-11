@@ -73,7 +73,7 @@ export class IaService {
             this.waService,
           ).getCourseSessionsByTermTool,
         },
-        toolChoice: 'required',
+        toolChoice: 'auto',
         temperature: 0,
       });
       if (result.response && result.response.messages) {
