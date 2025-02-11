@@ -167,7 +167,6 @@ export class ParserStrategy {
         classroom: null,
       });
     });
-    console.log(courseSessions);
     return courseSessions;
   }
   private cleanRow(row: string) {
