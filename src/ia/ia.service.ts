@@ -72,6 +72,12 @@ export class IaService {
             this.srcOfficeHours,
             this.waService,
           ).getCourseSessionsByTermTool,
+          banUserTool: new Tools(
+            this.srcExamDatesService,
+            this.srcScheduleService,
+            this.srcOfficeHours,
+            this.waService,
+          ).banUserTool,
         },
         toolChoice: 'auto',
         temperature: 0,
