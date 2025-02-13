@@ -6,6 +6,7 @@ import { IaModule } from './ia/ia.module';
 import { ConfigModule } from '@nestjs/config';
 import { WaModule } from './wa/wa.module';
 import { ScheduleModule } from '@nestjs/schedule';
+import { NotificationsModule } from './notifications/notifications.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -15,6 +16,7 @@ import { ScheduleModule } from '@nestjs/schedule';
     SourceModule,
     IaModule,
     ScheduleModule.forRoot(),
+    NotificationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

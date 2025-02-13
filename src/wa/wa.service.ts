@@ -14,6 +14,8 @@ import { IAWhatsappPluginService } from './ia.plugin.service';
 import { ConfigService } from '@nestjs/config';
 import * as fs from 'node:fs/promises';
 import { isGroupMessage } from './utils/utils';
+import { NotificationsService } from '../notifications/notifications.service';
+
 export class WaService {
   private socket;
   private messageStore: any = {};
@@ -29,6 +31,7 @@ export class WaService {
     @Inject() private tagEveryoneService: TagEveryoneService,
     private wspIaService: IAWhatsappPluginService,
     private configService: ConfigService,
+    private notificationService: NotificationsService,
   ) {
     this.plugins = [tagEveryoneService, wspIaService];
     this.authFolder = 'auth';
@@ -116,6 +119,29 @@ export class WaService {
           this.tagEveryoneService.process(key, message);
           return;
         }
+
+        // Llama al método notifySuspension si se detecta una suspensión de clases
+        if (text.includes('suspensión de clases')) {
+          const date = new Date().toISOString();
+          const reason = 'Suspensión de clases detectada en el mensaje';
+          await this.notifySuspension(date, reason);
+        }
+
+        // Verifica si el mensaje pregunta "¿hoy hay clase?"
+        if (text.toLowerCase().includes('@clase')) {
+          const today = new Date().toISOString().split('T')[0];
+          const suspension = this.notificationService.checkIfClassIsSuspended();
+          if (suspension) {
+            await this.sendMessage(key.remoteJid, {
+              text: `No hay clases hoy. Motivo: ${suspension}`,
+            });
+          } else {
+            await this.sendMessage(key.remoteJid, {
+              text: 'Sí, hay clases hoy.',
+            });
+          }
+        }
+
         this.wspIaService.process(key, message, text);
       }
     });
@@ -237,7 +263,12 @@ export class WaService {
       console.log('Error sending message', err);
     }
   }
+
+  async notifySuspension(date: string, reason: string) {
+    return this.notificationService.addNotification(date, reason);
+  }
 }
+
 type Message = {
   key: {
     remoteJid: string;
