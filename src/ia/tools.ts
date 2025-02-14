@@ -99,23 +99,27 @@ export class Tools {
     }),
   });
 
-  banUserTool = tool({
-    description: 'Ban a user by their participant ID',
-    parameters: z.object({
-      key: z.object({
-        participant: z
-          .string()
-          .describe('User ID in format 123456789@s.whatsapp.net'),
-      }),
-      message: z.string().optional().describe('Optional ban reason message'),
-    }),
-    execute: async ({ key, message }) => {
-      await this.waService.banUser({ message, key });
-      return {
-        bannedUser: key.participant,
-        success: true,
-        message: message || 'No reason provided',
-      };
-    },
-  });
+  // banUserTool = tool({
+  //   description: 'Ban a user by their participant ID',
+  //   parameters: z.object({
+  //     key: z.object({
+  //       participant: z
+  //         .string()
+  //         .describe('User ID in format 123456789@s.whatsapp.net'),
+  //     }),
+  //     message: z
+  //       .string()
+  //       .optional()
+  //       .default('')
+  //       .describe('Optional ban reason message'),
+  //   }),
+  //   execute: async ({ key, message }) => {
+  //     await this.waService.banUser({ message, key });
+  //     return {
+  //       bannedUser: key.participant,
+  //       success: true,
+  //       message: message || 'No reason provided',
+  //     };
+  //   },
+  // });
 }

@@ -10,5 +10,9 @@
   {
     "date": "2025-02-20",
     "reason": "Alerta meteorológica"
+  },
+  {
+    "date": "2025-02-13T23:59:56.106Z",
+    "reason": "Suspensión de clases detectada en el mensaje"
   }
 ]

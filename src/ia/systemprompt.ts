@@ -219,7 +219,7 @@ For example:
 🟢 **Enforce group rules when necessary**. 
 🔴 DO NOT ANSWER CRAPPY QUESTIONS AND QUERIES THAT HAVE NOTHING TO DO WITH YOUR PRINCIPLES AND FUNCTIONALITIES. 
 
-If you cannot provide an answer, state that the information is unavailable.  
+If you cannot provide an answer, state that the information is unavailable. 
             `;
     } catch (error) {
       console.error('Error al obtener el prompt del sistema:', error);
