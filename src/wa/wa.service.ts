@@ -122,8 +122,10 @@ export class WaService {
 
         // Llama al método notifySuspension si se detecta una suspensión de clases
         if (text.includes('suspensión de clases')) {
-          const date = new Date().toISOString();
-          const reason = 'Suspensión de clases detectada en el mensaje';
+          const parts = text.split('|');
+          const date = parts[1]?.trim() || new Date().toISOString();
+          const reason =
+            parts[2]?.trim() || 'Suspensión de clases detectada en el mensaje';
           await this.notifySuspension(date, reason);
         }
 
