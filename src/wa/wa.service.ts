@@ -15,6 +15,7 @@ import { ConfigService } from '@nestjs/config';
 import * as fs from 'node:fs/promises';
 import { isGroupMessage } from './utils/utils';
 import { NotificationsService } from '../notifications/notifications.service';
+import { SourceTelephoneService } from 'src/source/telephones/source.telephones.service';
 
 export class WaService {
   private socket;
@@ -32,6 +33,7 @@ export class WaService {
     private wspIaService: IAWhatsappPluginService,
     private configService: ConfigService,
     private notificationService: NotificationsService,
+    private readonly sourceTelephoneService: SourceTelephoneService,
   ) {
     this.plugins = [tagEveryoneService, wspIaService];
     this.authFolder = 'auth';
@@ -140,6 +142,24 @@ export class WaService {
           } else {
             await this.sendMessage(key.remoteJid, {
               text: 'Sí, hay clases hoy.',
+            });
+          }
+        }
+
+        // Verifica si el mensaje pregunta por un nombre específico
+        const nameMatch = text.match(
+          /(?:número de|numero de|número|numero|telefono|telefonos) (.+)/i,
+        );
+        if (nameMatch) {
+          const name = nameMatch[1];
+          const result = this.sourceTelephoneService.findByName(name);
+          if (result) {
+            await this.sendMessage(key.remoteJid, {
+              text: `El número de ${name} es: ${result.telephone} (corto: ${result.short})`,
+            });
+          } else {
+            await this.sendMessage(key.remoteJid, {
+              text: `No se encontró información para ${name}.`,
             });
           }
         }

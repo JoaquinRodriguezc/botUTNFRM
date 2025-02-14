@@ -1,0 +1,205 @@
+{
+  "SECRETARIAS": [
+    {
+      "telephone": "5244506",
+      "short": "106",
+      "name": "Secretaría de Decanato"
+    },
+    {
+      "telephone": "5244533",
+      "short": "133",
+      "name": "Secretaría Académica"
+    },
+    {
+      "telephone": "5244500",
+      "short": "100",
+      "name": "Secretaría Administrativa"
+    },
+    {
+      "telephone": "5244607",
+      "short": "207",
+      "name": "Secretaría de Vinculación e Innovación Tecnológica"
+    },
+    {
+      "telephone": "5244515",
+      "short": "115",
+      "name": "Secretaría Ciencia Tecnología y Posgrado"
+    },
+    {
+      "telephone": "5244601",
+      "short": "201",
+      "name": "Secretaría de Extensión Universitaria"
+    },
+    {
+      "telephone": "5244593",
+      "short": "193",
+      "name": "Coord. Sec. Ext. Universitaria"
+    },
+    {
+      "telephone": "5244565",
+      "short": "165",
+      "name": "Secretaría de Asuntos Estudiantiles"
+    },
+    {
+      "telephone": "5244534",
+      "short": "134",
+      "name": "Recepción Ciencia Tecnología y Posgrado"
+    },
+    {
+      "telephone": "5244538",
+      "short": "138/210",
+      "name": "Educación a Distancia"
+    },
+    {
+      "telephone": "5244561",
+      "short": "161",
+      "name": "UVT Unidad de Vinculación Tecnología"
+    },
+    {
+      "telephone": "5244589",
+      "short": "189",
+      "name": "Posgrado Planta alta"
+    },
+    {
+      "telephone": "5244590",
+      "short": "190/116",
+      "name": "Posgrado Planta baja"
+    },
+    {
+      "telephone": "5244600",
+      "short": "200",
+      "name": "Dirección Graduados"
+    },
+    {
+      "telephone": "5244614",
+      "short": "214",
+      "name": "Dirección de Comunicación Social"
+    },
+    {
+      "telephone": "5244602",
+      "short": "202",
+      "name": "Dirección de Orientación Psicopedagógica"
+    },
+    {
+      "telephone": "5244599",
+      "short": "199",
+      "name": "Dirección Económico Financiera"
+    },
+    {
+      "telephone": "5244554",
+      "short": "154",
+      "name": "Dirección TIC"
+    },
+    {
+      "telephone": "5244536",
+      "short": "136",
+      "name": "Dirección TIC en la Enseñanza"
+    }
+  ],
+  "BEDELIAS": [
+    {
+      "telephone": "5244548",
+      "short": "148",
+      "name": "Bedelía Civil"
+    },
+    {
+      "telephone": "5244530",
+      "short": "130",
+      "name": "Bedelía Electromecánica"
+    },
+    {
+      "telephone": "5244517",
+      "short": "117",
+      "name": "Bedelía Electrónica"
+    },
+    {
+      "telephone": "5244558",
+      "short": "158",
+      "name": "Bedelía Materias Básicas"
+    },
+    {
+      "telephone": "5244549",
+      "short": "149",
+      "name": "Bedelía Química"
+    },
+    {
+      "telephone": "5244541",
+      "short": "141",
+      "name": "Bedelía Sistemas"
+    },
+    {
+      "telephone": "5244577",
+      "short": "177",
+      "name": "Licenciatura en Administración de Empresas"
+    },
+    {
+      "telephone": "5244502",
+      "short": "102",
+      "name": "Licenciatura en Enseñanza de Matemática"
+    },
+    {
+      "telephone": "5244597",
+      "short": "197",
+      "name": "Higiene y Seguridad en el Trabajo"
+    },
+    {
+      "telephone": "5244586",
+      "short": "186",
+      "name": "Turismo y Hotelería"
+    },
+    {
+      "telephone": "5244574",
+      "short": "174",
+      "name": "Enología"
+    },
+    {
+      "telephone": "5244538",
+      "short": "138",
+      "name": "Tecnología Educativa"
+    },
+    {
+      "telephone": "5244541",
+      "short": "141",
+      "name": "Tecnicatura en Programación"
+    }
+  ],
+  "CURSOS": [
+    {
+      "telephone": "5244511",
+      "short": "111",
+      "name": "Cursos de Extensión Universitaria"
+    },
+    {
+      "telephone": "5244538",
+      "short": "138",
+      "name": "Cursos de Educación a Distancia / FAX"
+    },
+    {
+      "telephone": "5244576",
+      "short": "176",
+      "name": "Academia CISCO - ORACLE"
+    },
+    {
+      "telephone": "5244511",
+      "short": "111",
+      "name": "Escuela de Soldadura"
+    },
+    {
+      "telephone": "5244570",
+      "short": "170",
+      "name": "Cursos Hotelería y Turismo"
+    },
+    {
+      "telephone": "4243646",
+      "short": "",
+      "name": "Cursos de Informática e Idioma"
+    }
+  ],
+  "BIBLIOTECA": [
+    {
+      "telephone": "5244542",
+      "short": "142",
+      "name": "Biblioteca Universitaria"
+    }
+  ]
+}

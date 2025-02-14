@@ -2,6 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { SourceScheduleService } from './courseSessions/source.schedule.service';
 import { SourceExamDateService } from './examDates/source.examDates.service';
 import { SourceOfficeHours } from './officeHours/source.officeHours.service';
+import { SourceTelephoneService } from './telephones/source.telephones.service';
 
 @Controller('source')
 export class SourceController {
@@ -9,6 +10,7 @@ export class SourceController {
     private sourceExamDatesService: SourceExamDateService,
     private sourceScheduleService: SourceScheduleService,
     private sourceOfficeHoursService: SourceOfficeHours,
+    private sourceTelephoneService: SourceTelephoneService,
   ) {}
   @Get('/horarios')
   async getCourseSessions() {
@@ -32,5 +34,9 @@ export class SourceController {
   @Get('/consulta')
   async getOfficeHours() {
     return this.sourceOfficeHoursService.getOfficeHours();
+  }
+  @Get('/telefonos')
+  async getTelephones() {
+    return this.sourceTelephoneService.getTelephones();
   }
 }
