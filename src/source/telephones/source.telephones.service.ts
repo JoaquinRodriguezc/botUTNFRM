@@ -7,7 +7,7 @@ export class SourceTelephoneService {
   private telephones: any[];
 
   constructor() {
-    const dataPath = path.join(__dirname, '..', 'data', 'telephones.json');
+    const dataPath = path.join('src\\source\\telephones\\telephones.json');
     const rawData = fs.readFileSync(dataPath, 'utf8');
     this.telephones = JSON.parse(rawData);
   }
@@ -41,7 +41,7 @@ export class SourceTelephoneService {
   }
 
   private saveData(): void {
-    const dataPath = path.join(__dirname, '..', 'data', 'telephones.json');
+    const dataPath = path.join('src\\source\\telephones\\telephones.json');
     fs.writeFileSync(
       dataPath,
       JSON.stringify(this.telephones, null, 2),
@@ -49,14 +49,13 @@ export class SourceTelephoneService {
     );
   }
   getTelephones(): any[] {
-    return this.telephones;
+    const allTelephones = this.telephones;
+    return allTelephones;
   }
 
   findByName(name: string): any {
-    const allTelephones = this.telephones.concat(
-      ...Object.values(this.telephones),
-    );
-    return allTelephones.find((tel) =>
+    const telephones = ([] as any[]).concat(...Object.values(this.telephones));
+    return telephones.find((tel) =>
       tel.name.toLowerCase().includes(name.toLowerCase()),
     );
   }

@@ -3,7 +3,7 @@ import { tool } from 'ai';
 import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
 import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
 import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
-import { WaService } from 'src/wa/wa.service';
+import { SourceTelephoneService } from 'src/source/telephones/source.telephones.service';
 import { z } from 'zod';
 
 @Injectable()
@@ -12,7 +12,7 @@ export class Tools {
     private srcExamDatesService: SourceExamDateService,
     private srcScheduleService: SourceScheduleService,
     private srcOfficeHours: SourceOfficeHours,
-    private waService: WaService,
+    private srcTelephoneService: SourceTelephoneService,
   ) {}
 
   getExamDatesTool = tool({
@@ -122,4 +122,21 @@ export class Tools {
   //     };
   //   },
   // });
+  getTelephones = tool({
+    description: 'Get all telephones',
+    parameters: z.object({}),
+    execute: async ({}) => ({
+      telephones: await this.srcTelephoneService.getTelephones(),
+    }),
+  });
+  getTelephonesByNames = tool({
+    description: 'Get important telephone numbers by name or department',
+    parameters: z.object({
+      name: z.string().describe('Name or department to find telephone number'),
+    }),
+    execute: async ({ name }) => ({
+      name: name,
+      telephone: await this.srcTelephoneService.findByName(name),
+    }),
+  });
 }

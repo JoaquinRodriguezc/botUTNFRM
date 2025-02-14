@@ -8,12 +8,13 @@ import { SourceSubjectsService } from './subjects/source.subjects.service';
 import { SourceController } from './source.controller';
 import { SourceOfficeHours } from './officeHours/source.officeHours.service';
 import { LinksStrategy } from './officeHours/links.strategy';
-
+import { SourceTelephoneService } from './telephones/source.telephones.service';
 @Module({
   providers: [
     GoogleCalendarService,
     SourceExamDateService,
     SourceScheduleService,
+    SourceTelephoneService,
     ParserStrategy,
     CalendarStrategy,
     SourceSubjectsService,
@@ -26,6 +27,7 @@ import { LinksStrategy } from './officeHours/links.strategy';
     SourceScheduleService,
     SourceSubjectsService,
     SourceOfficeHours,
+    SourceTelephoneService,
   ],
 })
 export class SourceModule {}
