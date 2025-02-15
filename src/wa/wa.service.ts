@@ -115,54 +115,53 @@ export class WaService {
 
         const botNumber = this.getBotId();
 
-        text = text.replace('@' + botNumber, '');
-
         if (text.includes('@all')) {
           this.tagEveryoneService.process(key, message);
           return;
         }
+        text = text.replace('@' + botNumber, '');
 
-        // Llama al método notifySuspension si se detecta una suspensión de clases
-        if (text.includes('suspensión de clases')) {
-          const parts = text.split('|');
-          const date = parts[1]?.trim() || new Date().toISOString();
-          const reason =
-            parts[2]?.trim() || 'Suspensión de clases detectada en el mensaje';
-          await this.notifySuspension(date, reason);
-        }
+        // // Llama al método notifySuspension si se detecta una suspensión de clases
+        // if (text.includes('suspensión de clases')) {
+        //   const parts = text.split('|');
+        //   const date = parts[1]?.trim() || new Date().toISOString();
+        //   const reason =
+        //     parts[2]?.trim() || 'Suspensión de clases detectada en el mensaje';
+        //   await this.notifySuspension(date, reason);
+        // }
 
-        // Verifica si el mensaje pregunta "¿hoy hay clase?"
-        if (text.toLowerCase().includes('@clase')) {
-          const today = new Date().toISOString().split('T')[0];
-          const suspension = this.notificationService.checkIfClassIsSuspended();
-          if (suspension) {
-            await this.sendMessage(key.remoteJid, {
-              text: `No hay clases hoy. Motivo: ${suspension}`,
-            });
-          } else {
-            await this.sendMessage(key.remoteJid, {
-              text: 'Sí, hay clases hoy.',
-            });
-          }
-        }
+        // // Verifica si el mensaje pregunta "¿hoy hay clase?"
+        // if (text.toLowerCase().includes('@clase')) {
+        //   const today = new Date().toISOString().split('T')[0];
+        //   const suspension = this.notificationService.checkIfClassIsSuspended();
+        //   if (suspension) {
+        //     await this.sendMessage(key.remoteJid, {
+        //       text: `No hay clases hoy. Motivo: ${suspension}`,
+        //     });
+        //   } else {
+        //     await this.sendMessage(key.remoteJid, {
+        //       text: 'Sí, hay clases hoy.',
+        //     });
+        //   }
+        // }
 
         // Verifica si el mensaje pregunta por un nombre específico
-        const nameMatch = text.match(
-          /(?:número de|numero de|número|numero|telefono|telefonos) (.+)/i,
-        );
-        if (nameMatch) {
-          const name = nameMatch[1];
-          const result = this.sourceTelephoneService.findByName(name);
-          if (result) {
-            await this.sendMessage(key.remoteJid, {
-              text: `El número de ${name} es: ${result.telephone} (corto: ${result.short})`,
-            });
-          } else {
-            await this.sendMessage(key.remoteJid, {
-              text: `No se encontró información para ${name}.`,
-            });
-          }
-        }
+        // const nameMatch = text.match(
+        //   /(?:número de|numero de|número|numero|telefono|telefonos) (.+)/i,
+        // );
+        // if (nameMatch) {
+        //   const name = nameMatch[1];
+        //   const result = this.sourceTelephoneService.findByName(name);
+        //   if (result) {
+        //     await this.sendMessage(key.remoteJid, {
+        //       text: `El número de ${name} es: ${result.telephone} (corto: ${result.short})`,
+        //     });
+        //   } else {
+        //     await this.sendMessage(key.remoteJid, {
+        //       text: `No se encontró información para ${name}.`,
+        //     });
+        //   }
+        // }
 
         this.wspIaService.process(key, message, text);
       }

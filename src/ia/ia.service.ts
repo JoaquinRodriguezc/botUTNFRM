@@ -133,7 +133,7 @@ export class IaService {
 
       console.log('\n🚀 Starting Initial Generation...');
       const result = await generateText({
-        model: openai('o3-mini'),
+        model: openai('gpt-4o'),
         messages,
         tools: {
           getExamDates: tools.getExamDatesTool,
@@ -143,7 +143,7 @@ export class IaService {
           getCourseSessionsByCourseCode:
             tools.getCourseSessionsByCourseCodeTool,
           getCourseSessionsByTerm: tools.getCourseSessionsByTermTool,
-          getTelephonesByNames: tools.getTelephonesByNames,
+          // getTelephonesByNames: tools.getTelephonesByNames,
         },
         toolChoice: 'auto',
         temperature: 0,
@@ -170,7 +170,7 @@ export class IaService {
 
       console.log('\n🔄 Starting Final Generation...');
       const finalResult = await generateText({
-        model: openai('o3-mini'),
+        model: openai('gpt-4o'),
         messages,
         temperature: 0,
         experimental_telemetry: {

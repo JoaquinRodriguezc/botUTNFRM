@@ -122,13 +122,6 @@ export class Tools {
   //     };
   //   },
   // });
-  getTelephones = tool({
-    description: 'Get all telephones',
-    parameters: z.object({}),
-    execute: async ({}) => ({
-      telephones: await this.srcTelephoneService.getTelephones(),
-    }),
-  });
   getTelephonesByNames = tool({
     description: 'Get important telephone numbers by name or department',
     parameters: z.object({
@@ -136,7 +129,7 @@ export class Tools {
     }),
     execute: async ({ name }) => ({
       name: name,
-      telephone: await this.srcTelephoneService.findByName(name),
+      telephone: await this.srcTelephoneService.getByName(name),
     }),
   });
 }
