@@ -10,7 +10,7 @@ export async function isParticipantAdmin(sock, key) {
     console.log(participant);
     if (
       participant &&
-      (participant.admin === 'admin' || participant.superadmin === 'superadmin')
+      (participant.admin === 'admin' || participant.admin === 'superadmin')
     ) {
       return true;
     }
