@@ -10,6 +10,7 @@ export class SourceScheduleService {
   async getCourseSessionsBySubject(subjectName: string) {
     const sessions =
       await this.parserStrategy.getCourseSessionsBySubject(subjectName);
+    console.log('Sessions: ', sessions);
     return sessions;
   }
   async getCourseSessionsBySubjectComission(
@@ -32,7 +33,7 @@ export class SourceScheduleService {
       term,
       commission,
     );
-
+    console.log('Course by Term: ', courseTerm);
     return courseTerm;
   }
 }
