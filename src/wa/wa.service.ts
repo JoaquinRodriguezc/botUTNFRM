@@ -207,6 +207,7 @@ export class WaService {
       return false;
     }
     const isAGroupMessage = isGroupMessage(key);
+
     if (isAGroupMessage) {
       let mentions = message?.extendedTextMessage?.contextInfo?.mentionedJid;
 
