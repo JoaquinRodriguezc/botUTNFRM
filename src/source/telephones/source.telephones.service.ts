@@ -10,9 +10,12 @@ export class SourceTelephoneService {
    */
   getTelephones() {
     const allTelephones = this.fileStrategy.getTelephones();
+    console.log('Telephones: allTelephones');
     return allTelephones;
   }
   getByName(name: string) {
-    return this.fileStrategy.findByName(name);
+    const telephonesByName = this.fileStrategy.findByName(name);
+    console.log(telephonesByName);
+    return telephonesByName;
   }
 }

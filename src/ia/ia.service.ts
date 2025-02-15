@@ -143,7 +143,7 @@ export class IaService {
           getCourseSessionsByCourseCode:
             tools.getCourseSessionsByCourseCodeTool,
           getCourseSessionsByTerm: tools.getCourseSessionsByTermTool,
-          // getTelephonesByNames: tools.getTelephonesByNames,
+          getTelephonesByNames: tools.getTelephonesByNames,
         },
         toolChoice: 'auto',
         temperature: 0,
