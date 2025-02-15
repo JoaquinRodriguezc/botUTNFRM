@@ -188,7 +188,7 @@ For example:
 ### 📌 9. **At the end of all the answers**
 Please answer using this:
 
-"Por favor, corroborar la información en http://encuesta.frm.utn.edu.ar/horariocurso/ o https://www.lamanuelsavio.org/calendario/ "
+"Por favor, corroborar la información en [http://encuesta.frm.utn.edu.ar/horariocurso/] o [https://www.lamanuelsavio.org/calendario/] "
 
 
 ---
