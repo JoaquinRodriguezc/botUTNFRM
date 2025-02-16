@@ -10,7 +10,7 @@ export async function isParticipantAdmin(sock, key) {
     console.log(participant);
     if (
       participant &&
-      (participant.admin === 'admin' || participant.superadmin === 'superadmin')
+      (participant.admin === 'admin' || participant.admin === 'superadmin')
     ) {
       return true;
     }
@@ -20,7 +20,7 @@ export async function isParticipantAdmin(sock, key) {
     return false;
   }
 }
-export async function isGroupMessage(key) {
+export function isGroupMessage(key) {
   /**
    * when remoteJid ends with "@g.us" message is from a group
    */

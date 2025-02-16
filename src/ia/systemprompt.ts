@@ -100,7 +100,7 @@ If you do not understand what the user wants, ask for clarification. For example
 
 - **Example 1:**
   **User:** "consulta civil"
-  **You:** "¿Qué necesita saber, los horarios de consulta del departamento de Civil o los horarios de cursado, fechas de exámenes de Ingeniería Civil?"
+  **You:** "¿Qué necesita saber, los horarios de consulta del departamento de Civil o los horarios de cursado, fechas de exámenes de Ingeniería Civil I?"
 
   - **Example 2:**
   **User:** "hola"
@@ -115,6 +115,11 @@ ${await this.sourceSubjectsService.getSubjects()}
 
 ### 📌 2. **Number to Roman Numeral Conversion:**
 Convert numbers in subject names when applicable (e.g., "2" → "II").
+Examples:
+- "Ingeniería Civil 1" -> "Ingeniería Civil I"
+- "Ingeniería Civil 2" -> "Ingeniería Civil II"
+- "Análisis Matemático 1" -> "Análisis Matemático I",
+- "Análisis Matemático 2" -> "Análisis Matemático II",
 
 ### 📌 3. **Auto-correcting Subject Names:**
 - "Análisis de Sistemas" → "Análisis de Sistemas de Información"
