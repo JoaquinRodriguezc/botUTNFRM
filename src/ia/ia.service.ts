@@ -11,11 +11,6 @@ import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
 
-interface TokenUsage {
-  promptTokens: number;
-  completionTokens: number;
-}
-
 @Injectable()
 export class IaService {
   private conversationContexts: Map<
