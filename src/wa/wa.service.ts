@@ -227,12 +227,9 @@ export class WaService {
   private isBanned(key) {
     return this.bannedUsers.includes(key.participant);
   }
-  private userHasOnGoingResponse(userKey: string) {
-    console.log(userKey);
-    if (this.usersActive?.includes(userKey)) {
-      return true;
-    }
-    return false;
+  private userHasOnGoingResponse(userId: string): boolean {
+    // Usar el estado del plugin para verificar si el usuario está activo
+    return this.wspIaService.isUserActive(userId);
   }
   private async restart(): Promise<void> {
     await this.connect();

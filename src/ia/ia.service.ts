@@ -11,13 +11,19 @@ import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
 
-interface TokenUsage {
-  promptTokens: number;
-  completionTokens: number;
-}
-
 @Injectable()
 export class IaService {
+  private conversationContexts: Map<
+    string,
+    {
+      messages: CoreMessage[];
+      lastInteraction: Date;
+    }
+  > = new Map();
+
+  // Tiempo de expiración del contexto (30 minutos)
+  private readonly CONTEXT_EXPIRATION_TIME = 30 * 60 * 1000;
+
   constructor(
     private srcExamDatesService: SourceExamDateService,
     private srcScheduleService: SourceScheduleService,
@@ -25,7 +31,45 @@ export class IaService {
     private system: SystemPromptService,
     private srcTelephoneService: SourceTelephoneService,
     @Inject(forwardRef(() => WaService)) private waService: WaService,
-  ) {}
+  ) {
+    this.startContextCleanup();
+  }
+
+  private startContextCleanup() {
+    setInterval(() => {
+      const now = new Date().getTime();
+      for (const [userId, context] of this.conversationContexts.entries()) {
+        if (
+          now - context.lastInteraction.getTime() >
+          this.CONTEXT_EXPIRATION_TIME
+        ) {
+          this.conversationContexts.delete(userId);
+        }
+      }
+    }, this.CONTEXT_EXPIRATION_TIME);
+  }
+
+  private getConversationContext(userId: string) {
+    if (!this.conversationContexts.has(userId)) {
+      this.conversationContexts.set(userId, {
+        messages: [],
+        lastInteraction: new Date(),
+      });
+    }
+    return this.conversationContexts.get(userId)!;
+  }
+
+  private updateContext(userId: string, newMessages: CoreMessage[]) {
+    const context = this.getConversationContext(userId);
+    context.messages = [...context.messages, ...newMessages];
+    context.lastInteraction = new Date();
+
+    // Mantener solo los últimos N mensajes para evitar que el contexto crezca demasiado
+    const MAX_CONTEXT_MESSAGES = 10;
+    if (context.messages.length > MAX_CONTEXT_MESSAGES) {
+      context.messages = context.messages.slice(-MAX_CONTEXT_MESSAGES);
+    }
+  }
 
   private logResponseDetails(stage: string, response: any) {
     console.log(`\n🔍 ${stage}`);
@@ -86,7 +130,7 @@ export class IaService {
         const outputCost = (completion_tokens * 0.06) / 1000;
         const totalCost = inputCost + outputCost;
 
-        console.log('\n💰 Cost Estimation (o3-mini):');
+        console.log('\n�� Cost Estimation (o3-mini):');
         console.log('┌─────────────────┬──────────┐');
         console.log('│ Type           │   Cost   │');
         console.log('├─────────────────┼──────────┤');
@@ -109,15 +153,17 @@ export class IaService {
     }
   }
 
-  async processChatStream(prompt: string) {
+  async processChatStream(prompt: string, userId: string) {
     try {
-      console.log('Processing prompt:', prompt);
+      const context = this.getConversationContext(userId);
       const systemprompt = await this.system.getSystemPrompt();
-      const messages: CoreMessage[] = [
+
+      const currentConversation: CoreMessage[] = [
         {
           role: 'system',
           content: systemprompt,
         },
+        ...context.messages,
         {
           role: 'user',
           content: prompt,
@@ -132,9 +178,9 @@ export class IaService {
       );
 
       console.log('\n🚀 Starting Initial Generation...');
-      const result = await generateText({
+      const initialResponse = await generateText({
         model: openai('gpt-4o'),
-        messages,
+        messages: currentConversation,
         tools: {
           getExamDates: tools.getExamDatesTool,
           getCourseSessions: tools.getCourseSessionsTool,
@@ -161,17 +207,19 @@ export class IaService {
         },
       });
 
-      const initialResponse = result;
-      this.logResponseDetails('Initial Generation', initialResponse);
-
       if (initialResponse?.response?.messages) {
-        messages.push(...initialResponse.response.messages);
+        this.updateContext(userId, initialResponse.response.messages);
       }
 
+      this.logResponseDetails('Initial Generation', initialResponse);
+
       console.log('\n🔄 Starting Final Generation...');
-      const finalResult = await generateText({
+      const finalResponse = await generateText({
         model: openai('gpt-4o'),
-        messages,
+        messages: [
+          ...currentConversation,
+          ...(initialResponse?.response?.messages || []),
+        ],
         temperature: 0,
         experimental_telemetry: {
           isEnabled: true,
@@ -187,15 +235,19 @@ export class IaService {
         },
       });
 
-      const finalResponse = finalResult;
       this.logResponseDetails('Final Generation', finalResponse);
 
       if (finalResponse?.response?.messages) {
-        messages.push(...finalResponse.response.messages);
+        this.updateContext(userId, [
+          {
+            role: 'assistant',
+            content: finalResponse.text,
+          },
+        ]);
       }
 
       console.log('\n✅ Chat processing completed successfully');
-      return finalResult.text;
+      return finalResponse.text;
     } catch (error: any) {
       console.error('❌ Failed to process IA message:', error);
       throw new Error(`Failed to process IA message: ${error.message}`);
