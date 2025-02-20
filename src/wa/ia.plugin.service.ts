@@ -21,13 +21,14 @@ export class IAWhatsappPluginService {
 
   async process(key, message, text: string) {
     try {
-      const response = await this.iaService.processChatStream(text);
+      const userId = key.participant ?? key.remoteJid;
+      const response = await this.iaService.processChatStream(text, userId);
       this.sendMessage(
         key.remoteJid,
         { text: response },
         { quoted: { key, message } },
       );
-      this.setUsersNotActive(key.participant ?? key.remoteJid);
+      this.setUsersNotActive(userId);
     } catch (err) {
       this.setUsersNotActive(key.participant ?? key.remoteJid);
       console.log('Error processing messages:', err);

@@ -7,6 +7,8 @@ export class IaController {
 
   @Post()
   async chat(@Body() body: { prompt: string }) {
-    return await this.iaService.processChatStream(body.prompt);
+    // Para el controlador HTTP, podemos usar un ID genérico o basado en la sesión
+    const defaultUserId = 'web-user';
+    return await this.iaService.processChatStream(body.prompt, defaultUserId);
   }
 }
