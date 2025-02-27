@@ -132,8 +132,7 @@ export class IaService {
   private async updateContext(userId: string, newMessages: CoreMessage[]) {
     const context = await this.getConversationContext(userId);
     context.push(...newMessages);
-    const newContext = context.slice(-10);
-    await this.cacheManager.set(userId, JSON.stringify(newContext));
+    await this.cacheManager.set(userId, JSON.stringify(context));
   }
 
   private logResponseDetails(stage: string, response: any) {
