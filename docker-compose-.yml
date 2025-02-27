@@ -1,0 +1,8 @@
+services:
+  redis_bot:
+    image: redis:alpine
+    container_name: redis_bot
+    restart: always
+    env_file: .env
+    ports:
+      - '6379:6379'

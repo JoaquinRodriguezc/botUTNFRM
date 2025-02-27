@@ -10,12 +10,8 @@ import { SourceTelephoneService } from 'src/source/telephones/source.telephones.
 import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
-
-interface TokenUsage {
-  promptTokens: number;
-  completionTokens: number;
-}
-
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 @Injectable()
 export class IaService {
   constructor(
@@ -24,11 +20,125 @@ export class IaService {
     private srcOfficeHours: SourceOfficeHours,
     private system: SystemPromptService,
     private srcTelephoneService: SourceTelephoneService,
+    @Inject(CACHE_MANAGER) private cacheManager: Cache,
     @Inject(forwardRef(() => WaService)) private waService: WaService,
   ) {}
 
+  async processChatStream(prompt: string, userId: string) {
+    try {
+      const context = await this.getConversationContext(userId);
+      const systemprompt = await this.system.getSystemPrompt();
+
+      const currentConversation: CoreMessage[] = [
+        {
+          role: 'system',
+          content: systemprompt,
+        },
+        ...context,
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ];
+
+      const tools = new Tools(
+        this.srcExamDatesService,
+        this.srcScheduleService,
+        this.srcOfficeHours,
+        this.srcTelephoneService,
+      );
+
+      console.log('\n🚀 Starting Initial Generation...');
+      const initialResponse = await generateText({
+        model: openai('gpt-4o'),
+        messages: currentConversation,
+        tools: {
+          getExamDates: tools.getExamDatesTool,
+          getCourseSessions: tools.getCourseSessionsTool,
+          getCourseSessionsByComission: tools.getCourseSessionsByComissionTool,
+          getOfficeByDepartment: tools.getOfficeByDepartmentTool,
+          getCourseSessionsByCourseCode:
+            tools.getCourseSessionsByCourseCodeTool,
+          getCourseSessionsByTerm: tools.getCourseSessionsByTermTool,
+          getTelephonesByNames: tools.getTelephonesByNames,
+        },
+        toolChoice: 'auto',
+        temperature: 0,
+        experimental_telemetry: {
+          isEnabled: true,
+          functionId: 'initial-generation',
+          recordInputs: true,
+          recordOutputs: true,
+          metadata: {
+            stage: 'initial',
+          },
+        },
+        headers: {
+          'OpenAI-Beta': 'assistants=v1',
+        },
+      });
+
+      if (initialResponse?.response?.messages) {
+        this.updateContext(userId, initialResponse.response.messages);
+      }
+
+      this.logResponseDetails('Initial Generation', initialResponse);
+
+      console.log('\n🔄 Starting Final Generation...');
+      const finalResponse = await generateText({
+        model: openai('gpt-4o'),
+        messages: [
+          ...currentConversation,
+          ...(initialResponse?.response?.messages || []),
+        ],
+        temperature: 0,
+        experimental_telemetry: {
+          isEnabled: true,
+          functionId: 'final-generation',
+          recordInputs: true,
+          recordOutputs: true,
+          metadata: {
+            stage: 'final',
+          },
+        },
+        headers: {
+          'OpenAI-Beta': 'assistants=v1',
+        },
+      });
+
+      this.logResponseDetails('Final Generation', finalResponse);
+
+      if (finalResponse?.response?.messages) {
+        this.updateContext(userId, [
+          {
+            role: 'assistant',
+            content: finalResponse.text,
+          },
+        ]);
+      }
+
+      console.log('\n✅ Chat processing completed successfully');
+      return finalResponse.text;
+    } catch (error: any) {
+      throw new Error(`Failed to process IA message: ${error.message}`);
+    }
+  }
+  private async getConversationContext(userId: string) {
+    const context = await this.cacheManager.get<string>(userId);
+    if (context) return JSON.parse(context);
+    return [];
+  }
+
+  private async updateContext(userId: string, newMessages: CoreMessage[]) {
+    const context = await this.getConversationContext(userId);
+    context.push(...newMessages);
+    const newContext = context.slice(-10);
+    await this.cacheManager.set(userId, JSON.stringify(newContext));
+  }
+
   private logResponseDetails(stage: string, response: any) {
     console.log(`\n🔍 ${stage}`);
+
     const usage = response?.steps?.[0]?.usage;
 
     if (usage && typeof usage.promptTokens === 'number') {
@@ -86,7 +196,7 @@ export class IaService {
         const outputCost = (completion_tokens * 0.06) / 1000;
         const totalCost = inputCost + outputCost;
 
-        console.log('\n💰 Cost Estimation (o3-mini):');
+        console.log('\n�� Cost Estimation (o3-mini):');
         console.log('┌─────────────────┬──────────┐');
         console.log('│ Type           │   Cost   │');
         console.log('├─────────────────┼──────────┤');
@@ -106,99 +216,6 @@ export class IaService {
       console.log(`\n📝 Messages: ${response.messages.length}`);
     } else if (response?.response?.messages?.length) {
       console.log(`\n📝 Messages: ${response.response.messages.length}`);
-    }
-  }
-
-  async processChatStream(prompt: string) {
-    try {
-      console.log('Processing prompt:', prompt);
-      const systemprompt = await this.system.getSystemPrompt();
-      const messages: CoreMessage[] = [
-        {
-          role: 'system',
-          content: systemprompt,
-        },
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ];
-
-      const tools = new Tools(
-        this.srcExamDatesService,
-        this.srcScheduleService,
-        this.srcOfficeHours,
-        this.srcTelephoneService,
-      );
-
-      console.log('\n🚀 Starting Initial Generation...');
-      const result = await generateText({
-        model: openai('gpt-4o'),
-        messages,
-        tools: {
-          getExamDates: tools.getExamDatesTool,
-          getCourseSessions: tools.getCourseSessionsTool,
-          getCourseSessionsByComission: tools.getCourseSessionsByComissionTool,
-          getOfficeByDepartment: tools.getOfficeByDepartmentTool,
-          getCourseSessionsByCourseCode:
-            tools.getCourseSessionsByCourseCodeTool,
-          getCourseSessionsByTerm: tools.getCourseSessionsByTermTool,
-          getTelephonesByNames: tools.getTelephonesByNames,
-        },
-        toolChoice: 'auto',
-        temperature: 0,
-        experimental_telemetry: {
-          isEnabled: true,
-          functionId: 'initial-generation',
-          recordInputs: true,
-          recordOutputs: true,
-          metadata: {
-            stage: 'initial',
-          },
-        },
-        headers: {
-          'OpenAI-Beta': 'assistants=v1',
-        },
-      });
-
-      const initialResponse = result;
-      this.logResponseDetails('Initial Generation', initialResponse);
-
-      if (initialResponse?.response?.messages) {
-        messages.push(...initialResponse.response.messages);
-      }
-
-      console.log('\n🔄 Starting Final Generation...');
-      const finalResult = await generateText({
-        model: openai('gpt-4o'),
-        messages,
-        temperature: 0,
-        experimental_telemetry: {
-          isEnabled: true,
-          functionId: 'final-generation',
-          recordInputs: true,
-          recordOutputs: true,
-          metadata: {
-            stage: 'final',
-          },
-        },
-        headers: {
-          'OpenAI-Beta': 'assistants=v1',
-        },
-      });
-
-      const finalResponse = finalResult;
-      this.logResponseDetails('Final Generation', finalResponse);
-
-      if (finalResponse?.response?.messages) {
-        messages.push(...finalResponse.response.messages);
-      }
-
-      console.log('\n✅ Chat processing completed successfully');
-      return finalResult.text;
-    } catch (error: any) {
-      console.error('❌ Failed to process IA message:', error);
-      throw new Error(`Failed to process IA message: ${error.message}`);
     }
   }
 }
