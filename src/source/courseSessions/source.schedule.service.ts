@@ -17,11 +17,14 @@ export class SourceScheduleService {
     subjectName: string,
     commission: string,
   ) {
+    let startTime = 'Time taken by getCourseSessionsBySubjectComission';
+    console.time(startTime);
     const sessionsbyCommission =
       await this.parserStrategy.getCourseSessionsBySubjectComission(
         subjectName,
         commission,
       );
+    console.timeEnd(startTime);
     return sessionsbyCommission;
   }
   async getCourseSessionsByCourseCode(courseCode: string) {

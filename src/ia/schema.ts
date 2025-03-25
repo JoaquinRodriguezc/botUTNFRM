@@ -1,14 +1,25 @@
-import z from 'zod';
+import { ZodObject } from 'zod';
+import { Tools } from './tools';
 
-export const schema = z.object({
-  recipe: z.object({
-    name: z.string(),
-    ingredients: z.array(
-      z.object({
-        name: z.string(),
-        amount: z.string(),
-      }),
-    ),
-    steps: z.array(z.string()),
-  }),
-});
+export function collectTools(instance: Tools) {
+  const tools: Record<string, SdkTools> = {};
+
+  for (const key of Object.keys(instance)) {
+    const value = instance[key];
+    if (
+      typeof value === 'function' ||
+      typeof value !== 'object' ||
+      !key.includes('Tool')
+    )
+      continue;
+    tools[key] = value;
+  }
+
+  return tools;
+}
+
+type SdkTools = {
+  description: string;
+  execute: () => Promise<any>;
+  parameters: ZodObject<any>;
+};

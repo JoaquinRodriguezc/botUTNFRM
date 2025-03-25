@@ -18,7 +18,7 @@ import { NotificationsService } from '../notifications/notifications.service';
 import { SourceTelephoneService } from 'src/source/telephones/source.telephones.service';
 
 export class WaService {
-  private socket;
+  private socket: ReturnType<typeof makeWASocket>;
   private messageStore: any = {};
   private emptyChar: string = '‎ ';
   private authFolder: string;
@@ -76,25 +76,25 @@ export class WaService {
         const update = events['connection.update'];
         const { connection, lastDisconnect } = update;
 
-        if (connection === 'close') {
-          if (
-            lastDisconnect?.error?.output?.statusCode ===
-            DisconnectReason.loggedOut
-          ) {
-            console.log('Connection closed. You are logged out.');
-          } else if (
-            lastDisconnect?.error?.output?.statusCode ===
-            DisconnectReason.timedOut
-          ) {
-            console.log(
-              new Date().toLocaleTimeString(),
-              'Timed out. Will retry in 1 minute.',
-            );
-            setTimeout(this.restart.bind(this), 60 * 1000);
-          } else {
-            this.restart();
-          }
-        }
+        // if (connection === 'close') {
+        //   if (
+        //     lastDisconnect?.error?.message?.statusCode ===
+        //     DisconnectReason.loggedOut
+        //   ) {
+        //     console.log('Connection closed. You are logged out.');
+        //   } else if (
+        //     lastDisconnect?.error?.output?.statusCode ===
+        //     DisconnectReason.timedOut
+        //   ) {
+        //     console.log(
+        //       new Date().toLocaleTimeString(),
+        //       'Timed out. Will retry in 1 minute.',
+        //     );
+        //     setTimeout(this.restart.bind(this), 60 * 1000);
+        //   } else {
+        //     this.restart();
+        //   }
+        // }
       }
 
       if (events['creds.update']) {
@@ -108,6 +108,7 @@ export class WaService {
           const { key, message } = msg;
           const handle = this.shouldHandle({ key, message });
           if (!handle) return;
+          this.socket.sendPresenceUpdate('composing', key.remoteJid);
           console.log(`Handling message for ${key}: ${message}`);
 
           let text = this.getText(key, message);
@@ -237,7 +238,10 @@ export class WaService {
   ): Promise<void> {
     try {
       if (!this.selfReply) content.text = (content.text || '') + this.emptyChar;
+      let time = 'Time taken by sendMessage inside';
+      console.time(time);
       const sent = await this.socket.sendMessage(jid, content, ...args);
+      console.timeEnd(time);
       this.messageStore[sent.key.id!] = sent;
     } catch (err) {
       console.log('Error sending message', err);

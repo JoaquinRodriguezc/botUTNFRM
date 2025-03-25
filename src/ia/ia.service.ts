@@ -1,31 +1,22 @@
 import { openai } from '@ai-sdk/openai';
-import { forwardRef, Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CoreMessage, generateText } from 'ai';
-//import { ollama } from 'ollama-ai-provider';
-//import { groq } from '@ai-sdk/groq';
-import { SourceScheduleService } from 'src/source/courseSessions/source.schedule.service';
-import { SourceExamDateService } from 'src/source/examDates/source.examDates.service';
-import { SourceOfficeHours } from 'src/source/officeHours/source.officeHours.service';
-import { SourceTelephoneService } from 'src/source/telephones/source.telephones.service';
-import { WaService } from 'src/wa/wa.service';
 import { SystemPromptService } from './systemprompt';
 import { Tools } from './tools';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Cache } from 'cache-manager';
+import { collectTools } from './schema';
 @Injectable()
 export class IaService {
   constructor(
-    private srcExamDatesService: SourceExamDateService,
-    private srcScheduleService: SourceScheduleService,
-    private srcOfficeHours: SourceOfficeHours,
     private system: SystemPromptService,
-    private srcTelephoneService: SourceTelephoneService,
+    private tools: Tools,
     @Inject(CACHE_MANAGER) private cacheManager: Cache,
-    @Inject(forwardRef(() => WaService)) private waService: WaService,
   ) {}
 
   async processChatStream(prompt: string, userId: string) {
     try {
+      let time = 'Time taken by processChatStream';
       const context = await this.getConversationContext(userId);
       const systemprompt = await this.system.getSystemPrompt();
 
@@ -40,85 +31,29 @@ export class IaService {
           content: prompt,
         },
       ];
-
-      const tools = new Tools(
-        this.srcExamDatesService,
-        this.srcScheduleService,
-        this.srcOfficeHours,
-        this.srcTelephoneService,
-      );
+      const sdkTools = collectTools(this.tools);
 
       console.log('\n🚀 Starting Initial Generation...');
-      const initialResponse = await generateText({
+
+      const response = await generateText({
         model: openai('gpt-4o'),
         messages: currentConversation,
-        tools: {
-          getExamDates: tools.getExamDatesTool,
-          getCourseSessions: tools.getCourseSessionsTool,
-          getCourseSessionsByComission: tools.getCourseSessionsByComissionTool,
-          getOfficeByDepartment: tools.getOfficeByDepartmentTool,
-          getCourseSessionsByCourseCode:
-            tools.getCourseSessionsByCourseCodeTool,
-          getCourseSessionsByTerm: tools.getCourseSessionsByTermTool,
-          getTelephonesByNames: tools.getTelephonesByNames,
-        },
-        toolChoice: 'auto',
+        tools: sdkTools,
+        maxSteps: 10,
         temperature: 0,
-        experimental_telemetry: {
-          isEnabled: true,
-          functionId: 'initial-generation',
-          recordInputs: true,
-          recordOutputs: true,
-          metadata: {
-            stage: 'initial',
-          },
-        },
-        headers: {
-          'OpenAI-Beta': 'assistants=v1',
-        },
       });
 
-      if (initialResponse?.response?.messages) {
-        this.updateContext(userId, initialResponse.response.messages);
+      if (response?.response?.messages) {
+        this.updateContext(userId, response.response.messages);
       }
 
-      this.logResponseDetails('Initial Generation', initialResponse);
-
-      console.log('\n🔄 Starting Final Generation...');
-      const finalResponse = await generateText({
-        model: openai('gpt-4o'),
-        messages: [
-          ...currentConversation,
-          ...(initialResponse?.response?.messages || []),
-        ],
-        temperature: 0,
-        experimental_telemetry: {
-          isEnabled: true,
-          functionId: 'final-generation',
-          recordInputs: true,
-          recordOutputs: true,
-          metadata: {
-            stage: 'final',
-          },
-        },
-        headers: {
-          'OpenAI-Beta': 'assistants=v1',
-        },
-      });
-
-      this.logResponseDetails('Final Generation', finalResponse);
-
-      if (finalResponse?.response?.messages) {
-        this.updateContext(userId, [
-          {
-            role: 'assistant',
-            content: finalResponse.text,
-          },
-        ]);
-      }
-
-      console.log('\n✅ Chat processing completed successfully');
-      return finalResponse.text;
+      this.logResponseDetails('Initial Generation', response);
+      // if (response.toolResults[0]?.result) {
+      //   console.timeEnd(time);
+      //   return JSON.stringify(response.toolResults[0].result);
+      // }
+      console.log('Chat processing completed successfully');
+      return response.text;
     } catch (error: any) {
       throw new Error(`Failed to process IA message: ${error.message}`);
     }
