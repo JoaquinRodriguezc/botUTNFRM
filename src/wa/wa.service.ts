@@ -74,27 +74,27 @@ export class WaService {
     this.socket.ev.process(async (events) => {
       if (events['connection.update']) {
         const update = events['connection.update'];
-        const { connection, lastDisconnect } = update;
+        const { connection, lastDisconnect } = update as any;
 
-        // if (connection === 'close') {
-        //   if (
-        //     lastDisconnect?.error?.message?.statusCode ===
-        //     DisconnectReason.loggedOut
-        //   ) {
-        //     console.log('Connection closed. You are logged out.');
-        //   } else if (
-        //     lastDisconnect?.error?.output?.statusCode ===
-        //     DisconnectReason.timedOut
-        //   ) {
-        //     console.log(
-        //       new Date().toLocaleTimeString(),
-        //       'Timed out. Will retry in 1 minute.',
-        //     );
-        //     setTimeout(this.restart.bind(this), 60 * 1000);
-        //   } else {
-        //     this.restart();
-        //   }
-        // }
+        if (connection === 'close') {
+          if (
+            lastDisconnect?.error?.message?.statusCode ===
+            DisconnectReason.loggedOut
+          ) {
+            console.log('Connection closed. You are logged out.');
+          } else if (
+            lastDisconnect?.error?.output?.statusCode ===
+            DisconnectReason.timedOut
+          ) {
+            console.log(
+              new Date().toLocaleTimeString(),
+              'Timed out. Will retry in 1 minute.',
+            );
+            setTimeout(this.restart.bind(this), 60 * 1000);
+          } else {
+            this.restart();
+          }
+        }
       }
 
       if (events['creds.update']) {
