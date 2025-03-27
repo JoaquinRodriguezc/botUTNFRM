@@ -132,8 +132,8 @@ export class SystemPromptService {
 
 <footer>
     <verification-message>
-        Por favor, corroborar la información en [http://encuesta.frm.utn.edu.ar/horariocurso/] o [https://www.lamanuelsavio.org/calendario/]
-    </verification-message>
+        Por favor, corroborar la información en sitios oficiales.
+        </verification-message>
 </footer>
 
 <user-request>
