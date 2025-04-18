@@ -44,7 +44,10 @@ export class IaService {
       });
 
       if (response?.response?.messages) {
+        console.log('Pasando respueta para actualizar contexto');
         this.updateContext(userId, response.response.messages);
+      } else {
+        console.log('No estoy pasando nada!');
       }
 
       this.logResponseDetails('Initial Generation', response);
@@ -66,7 +69,9 @@ export class IaService {
 
   private async updateContext(userId: string, newMessages: CoreMessage[]) {
     const context = await this.getConversationContext(userId);
+    console.log('Antes de actualizar', context);
     context.push(...newMessages);
+    console.log('Contexto actualizado!', context);
     await this.cacheManager.set(userId, JSON.stringify(context));
   }
 
