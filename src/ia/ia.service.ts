@@ -36,11 +36,11 @@ export class IaService {
       console.log('\n🚀 Starting Initial Generation...');
 
       const response = await generateText({
-        model: openai('gpt-4o'),
+        model: openai('gpt-5'),
         messages: currentConversation,
         tools: sdkTools,
         maxSteps: 10,
-        temperature: 0,
+        temperature: 1,
       });
 
       if (response?.response?.messages) {

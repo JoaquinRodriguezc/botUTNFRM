@@ -16,7 +16,7 @@ import * as fs from 'node:fs/promises';
 import { isGroupMessage } from './utils/utils';
 import { NotificationsService } from '../notifications/notifications.service';
 import { SourceTelephoneService } from 'src/source/telephones/source.telephones.service';
-
+import * as qrCode from 'qrcode-terminal';
 export class WaService {
   private socket: ReturnType<typeof makeWASocket>;
   private messageStore: any = {};
@@ -74,8 +74,10 @@ export class WaService {
     this.socket.ev.process(async (events) => {
       if (events['connection.update']) {
         const update = events['connection.update'];
-        const { connection, lastDisconnect } = update as any;
-
+        const { connection, lastDisconnect, qr } = update as any;
+        if (qr) {
+          qrCode.generate(qr, { small: true });
+        }
         if (connection === 'close') {
           if (
             lastDisconnect?.error?.message?.statusCode ===
