@@ -36,7 +36,7 @@ export class IaService {
       console.log('\n🚀 Starting Initial Generation...');
 
       const response = await generateText({
-        model: openai('gpt-5'),
+        model: openai('gpt-4o-mini'),
         messages: currentConversation,
         tools: sdkTools,
         maxSteps: 10,
